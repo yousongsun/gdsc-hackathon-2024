@@ -41,5 +41,5 @@ app.use("/", routes);
 
 // Start the server running.
 app.listen(PORT, () => {
-    console.log(`Express server listening on port ${PORT}`);
+    console.log(`PGCIT Final Project server listening on port ${PORT}`);
 });
