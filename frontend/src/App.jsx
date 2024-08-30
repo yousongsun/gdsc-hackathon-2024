@@ -4,7 +4,7 @@ import './App.css'
 
 const App = () => {
   return (
-    <div>Hello</div>
+    <div className = 'w-screen h-screen bg-primary'></div>
   )
 }
 

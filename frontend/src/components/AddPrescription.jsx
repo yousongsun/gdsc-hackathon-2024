@@ -2,7 +2,7 @@ import React from 'react'
 
 const AddPrescription = () => {
   return (
-    <div>AddPrescription</div>
+    <div></div>
   )
 }
 
