@@ -18,4 +18,10 @@ router.post("/", async (req, res) => {
   res.status(201).json(p);
 });
 
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  await Prescription.deleteOne({ _id: id });
+  res.sendStatus(204);
+});
+
 export default router;
