@@ -7,11 +7,11 @@ const Prescription = () => {
 
   const { name } = useParams()
   const [prescription, setPrescription] = useState({
-    prescriptionName: '',
-    medicationName: '',
-    medicationDetails: '',
-    administrationInstructions: '',
-    additionalDetails: ''
+    prescriptionName: 'Prescription 1',
+    medicationName: 'Paracetamol',
+    medicationDetails: '40mg',
+    administrationInstructions: '2 capsules per dose',
+    additionalDetails: 'take after lunch'
   })
   
   useEffect(() => {
@@ -37,20 +37,31 @@ const Prescription = () => {
         </Link>
         <div className="text-3xl text-white font-bold">Prescription Details</div>
       </div>
-    <div className='bg-white/80 rounded-3xl shadow-lg p-6 mt-4'>
-        
-      <h2 className='text-lg text-black font-bold mb-2'>Prescription Name</h2>
+
+      <div className="bg-white/80 rounded-3xl shadow-lg p-6 mt-4">
+      <div className="text-3xl text-[#c0c0c0] font-bold mb-2">Every 12 hours</div>
       <div className='flex justify-between'>
-        <h2 className='text-3xl font-bold mb-2'>{prescription?.prescriptionName}</h2>
+        
+      <h2 className='text-5xl font-bold mb-2'>{prescription?.medicationName}</h2>
         <button className='bg-primary hover:bg-purple-500 text-white font-bold py-1 px-4 rounded-3xl mt-4'>
-          Edit Prescription
+          Edit 
         </button>
       </div>
-      <h3 className='text-2xl font-bold mb-2'>{prescription?.medicationName}</h3>
-      <p className='text-lg font-bold mb-2'>{prescription?.medicationDetails}</p>
-      <p className='text-gray-800 mb-2'>{prescription?.administrationInstructions}</p>
+
+      <p className='text-xl font-bold mb-2'>{prescription?.medicationDetails}, {prescription?.administrationInstructions}</p>
+
+      <div className="p-2 w-full bg-indigo-400 rounded-2xl my-2.5">
+        <div
+            style={{ width: 1000 }}
+            className="h-2 bg-white/90 rounded-2xl"
+        ></div>
+      </div>
+
+      <h2 className="text-lg text-[#c0c0c0] font-bold mb-2">26/55 Doses taken</h2>
       <p className='text-gray-800'>{prescription?.additionalDetails}</p>
-    </div> 
+
+
+      </div>
     </div>
     
   );
