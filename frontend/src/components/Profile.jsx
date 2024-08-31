@@ -10,8 +10,7 @@ const Profile = () => {
           <img className='w-16 h-16' src={Icon} alt="Icon" />
           <div className='text-3xl text-white font-bold'>My Account</div>
         </div>
-
-        <div className='bg-white/80 rounded-3xl shadow-lg p-6 mt-4 glow'>
+        <div className='bg-white/80 rounded-3xl shadow-lg p-6 mt-4'>
           <h2 className='text-lg text-[#c0c0c0] font-bold mb-2'>Profile</h2>
           <div className='flex justify-between'>
             <h2 className='text-3xl font-bold mb-2'>Google Developer</h2>
@@ -56,3 +55,4 @@ const Profile = () => {
 }
 
 export default Profile
+
