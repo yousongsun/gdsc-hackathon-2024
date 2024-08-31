@@ -8,27 +8,34 @@ import "./App.css";
 import WebSidebar from "./components/WebSidebar";
 import Profile from "./components/Profile";
 import Prescription from "./components/Prescription";
+import Login from "./components/Login";
 
 const App = () => {
   const [sidebarVisible, setsidebarVisible] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <BrowserRouter>
 
-      <div className="w-full h-full animate-gradient-x bg-gradient-to-r from-[#94b9ff] via-violet-400 to-[#67c5d3] flex">
-        <WebSidebar
+      <div className={`${isLoggedIn && 'w-screen'}w-full h-full animate-gradient-x bg-gradient-to-r from-[#94b9ff] via-violet-400 to-[#67c5d3] flex`}>
+        {isLoggedIn && <WebSidebar
           sidebarVisible={sidebarVisible}
           setsidebarVisible={setsidebarVisible}
-        />
+          setIsLoggedIn={setIsLoggedIn}
+        />}
+        
         <div className={`${sidebarVisible ? "w-4/5" : "w-full"} ease-in-out duration-100 transition-all`}>
           <Routes>
-            <Route path="*" element={<Homepage />} />
-            <Route path="/" element={<Homepage />} />
+            <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+            <Route path="*" element={isLoggedIn ? <Homepage /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
+            <Route path="/" element={isLoggedIn ? <Homepage /> : <Login setIsLoggedIn={setIsLoggedIn}/>}  />
             <Route path="/profile" element={<Profile />} />
             <Route path="/prescriptions" element={<AllPrescriptions />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/add-prescription" element={<AddPrescription />} />
             <Route path="/prescriptions/:id" element={<Prescription />} />
+            <Route path="/logout" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+
           </Routes>
         </div>
       </div>
