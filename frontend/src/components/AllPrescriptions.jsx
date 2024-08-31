@@ -7,25 +7,25 @@ import axios from "axios";
 import { PRECRIPTION_URL } from "../api/urls";
 
 const AllPrescriptions = () => {
-  const [allPrsps, setAllPrsps] = useState([]);
-  const getAllPrsps = async () => {
-    await axios.get(PRECRIPTION_URL).then((res) => {
-      setAllPrsps(res.data);
-      console.log(allPrsps);
-    });
-  };
-  useEffect(() => {
-    getAllPrsps();
-  }, []);
+  // const [allPrsps, setAllPrsps] = useState([]);
+  // const getAllPrsps = async () => {
+  //   await axios.get(PRECRIPTION_URL).then((res) => {
+  //     setAllPrsps(res.data);
+  //     console.log(allPrsps);
+  //   });
+  // };
+  // useEffect(() => {
+  //   getAllPrsps();
+  // }, []);
 
-  const prspBanners = allPrsps.map((p, index) => (
-    <PrescriptionBanner
-      key={index}
-      name={p.medicationName}
-      dose={p.medicationDetails}
-      details={p.additionalDetails}
-    />
-  ));
+  // const prspBanners = allPrsps.map((p, index) => (
+  //   <PrescriptionBanner
+  //     key={index}
+  //     name={p.medicationName}
+  //     dose={p.medicationDetails}
+  //     details={p.additionalDetails}
+  //   />
+  // ));
 
   return (
     <div className="container p-4 mx-auto">
@@ -61,7 +61,7 @@ const AllPrescriptions = () => {
           </div>
         </div>
         <PrescriptionBanner name={"Paracetamol"} dose={"500mg"} />
-        {prspBanners}
+        {/* {prspBanners} */}
       </div>
     </div>
   );
