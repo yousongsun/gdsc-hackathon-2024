@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import Settings from "./components/Settings";
 import Prescriptions from "./components/AllPrescriptions";
 import AddPrescription from "./components/AddPrescription";
 import "./App.css";
+import WebSidebar from "./components/WebSidebar";
 
 const App = () => {
 
