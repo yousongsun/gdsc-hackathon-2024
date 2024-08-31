@@ -9,28 +9,27 @@ import WebSidebar from "./components/WebSidebar";
 import Profile from "./components/Profile";
 
 const App = () => {
-
-  const [sidebarVisible, setsidebarVisible] = useState(false)
+  const [sidebarVisible, setsidebarVisible] = useState(false);
 
   return (
-    
     <BrowserRouter>
-      <div className = 'w-screen h-screen bg-primary flex'>
-        <WebSidebar sidebarVisible={sidebarVisible} setsidebarVisible={setsidebarVisible} />
-        <div className={`${sidebarVisible ? 'w-3/4' : 'w-full'} py-20 px-2`}>
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/prescriptions" element={<AllPrescriptions />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/add-prescription" element={<AddPrescription />} />
-            </Routes>
+      <div className="w-screen h-screen bg-gradient-to-r from-purple-400 to-primary flex">
+        <WebSidebar
+          sidebarVisible={sidebarVisible}
+          setsidebarVisible={setsidebarVisible}
+        />
+        <div className={`${sidebarVisible ? "w-3/4" : "w-full"}`}>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/prescriptions" element={<AllPrescriptions />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/add-prescription" element={<AddPrescription />} />
+          </Routes>
         </div>
       </div>
     </BrowserRouter>
   );
 };
-
-
 
 export default App;
