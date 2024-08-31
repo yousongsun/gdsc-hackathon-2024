@@ -27,7 +27,7 @@
 
 .fc .fc-daygrid-day.fc-day-today {
   border-radius: 10px;
-  background-color: rgb(136, 77, 255);
+  border: 1px white;
 }
 
 .fc .fc-scrollgrid,

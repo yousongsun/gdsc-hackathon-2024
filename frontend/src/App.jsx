@@ -19,7 +19,7 @@ const App = () => {
           sidebarVisible={sidebarVisible}
           setsidebarVisible={setsidebarVisible}
         />
-        <div className={`${sidebarVisible ? "w-3/4" : "w-full"} ease-in-out duration-100 transition-all`}>
+        <div className={`${sidebarVisible ? "w-4/5" : "w-full"} ease-in-out duration-100 transition-all`}>
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/profile" element={<Profile />} />

@@ -29,17 +29,17 @@ const AllPrescriptions = () => {
     <div className="container p-4 mx-auto">
       <div className="flex items-center">
         <Link to="/"><img className="w-16 h-16" src={Icon} alt="Icon" /></Link>
-        <div className="text-3xl text-white font-bold">Your Prescriptions</div>
+        <div className="text-3xl text-white font-bold">My Prescriptions</div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pr-6">
-        <div className="bg-white/80 rounded-3xl shadow-lg p-6 mt-4 hover:bg-gray-50">
+        <div className="bg-white/60 rounded-3xl shadow-lg p-6 mt-4 ">
           <div className="flex items-center justify-center h-full gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke="#c0c0c0"
+              stroke="#666666"
               className="size-10"
             >
               <path
@@ -50,7 +50,7 @@ const AllPrescriptions = () => {
             </svg>
             <Link
               to="/add-prescription"
-              className="text-4xl text-[#c0c0c0] font-bold"
+              className="text-4xl text-[#666666] font-bold"
             >
               New Prescription
             </Link>
