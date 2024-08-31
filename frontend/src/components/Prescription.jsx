@@ -4,7 +4,13 @@ import { useParams } from 'react-router-dom'
 const Prescription = () => {
 
   const { name } = useParams()
-  const [prescription, setPrescription] = useState({})
+  const [prescription, setPrescription] = useState({
+    prescriptionName: '',
+    medicationName: '',
+    medicationDetails: '',
+    administrationInstructions: '',
+    additionalDetails: ''
+  })
   
   useEffect(() => {
     const getPrescriptionData = async () => {

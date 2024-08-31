@@ -8,6 +8,7 @@ import "./App.css";
 import WebSidebar from "./components/WebSidebar";
 import Profile from "./components/Profile";
 import Prescription from "./components/Prescription";
+import Login from "./components/Login";
 
 const App = () => {
   const [sidebarVisible, setsidebarVisible] = useState(false);
@@ -20,8 +21,9 @@ const App = () => {
           sidebarVisible={sidebarVisible}
           setsidebarVisible={setsidebarVisible}
         />
-        <div className={`${sidebarVisible ? "w-3/4" : "w-full"} ease-in-out duration-100 transition-all`}>
+        <div className={`${sidebarVisible ? "w-4/5" : "w-full"} ease-in-out duration-100 transition-all`}>
           <Routes>
+            <Route path="/login" element={<Login />} />
             <Route path="*" element={<Homepage />} />
             <Route path="/" element={<Homepage />} />
             <Route path="/profile" element={<Profile />} />
@@ -29,6 +31,7 @@ const App = () => {
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/add-prescription" element={<AddPrescription />} />
             <Route path="/prescriptions/:id" element={<Prescription />} />
+
           </Routes>
         </div>
       </div>
