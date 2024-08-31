@@ -15,6 +15,9 @@ const Homepage = () => {
         <div className="text-gray-400 text-xl">In 3 hours, 40 minutes</div>
         <div className="text-4xl">Prescription Name</div>
         <div>40mg, 2 capsules</div>
+        <div className="p-2 w-full bg-gray-400 rounded-2xl">
+          <div className="w-1/2 h-1 bg-purple-600 rounded-2xl"></div>
+        </div>
         <div className="text-gray-400 text-xl">26/55 taken</div>
         <div>details</div>
       </div>
@@ -22,6 +25,9 @@ const Homepage = () => {
         <div className="text-gray-400 text-xl">In 3 hours, 40 minutes</div>
         <div className="text-4xl">Prescription Name</div>
         <div>40mg, 2 capsules</div>
+        <div className="p-2 w-full bg-gray-400 rounded-2xl">
+          <div className="w-1/4 h-1 bg-purple-600 rounded-2xl"></div>
+        </div>
         <div className="text-gray-400 text-xl">26/55 taken</div>
         <div>details</div>
       </div>
