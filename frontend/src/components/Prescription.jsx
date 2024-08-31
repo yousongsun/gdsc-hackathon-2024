@@ -46,7 +46,7 @@ const Prescription = () => {
             <button className='text-5xl' onClick={() => { if (dosesTaken < dosesTotal) { setDosesTaken(dosesTaken + 1) } }}>
               +
             </button>
-            <button className='text-5xl' onClick={() => { if (dosesTaken <= dosesTotal) { setDosesTaken(dosesTaken - 1) } }}>
+            <button className='text-5xl' onClick={() => { if (dosesTaken <= dosesTotal && dosesTaken > 0) { setDosesTaken(dosesTaken - 1) } }}>
               -
             </button>
             <button className="bg-indigo-400 text-white font-semibold py-1 px-4 rounded-3xl mt-4 text-lg">
