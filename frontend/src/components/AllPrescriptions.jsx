@@ -11,6 +11,7 @@ const AllPrescriptions = () => {
         <img className="w-16 h-16" src={Icon} alt="Icon" />
         <div className="text-3xl text-white font-bold">Your Prescriptions</div>
       </div>
+<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pr-6">
         <div className="bg-white rounded-3xl shadow-lg p-6 mt-4 hover:bg-gray-50">
           <Link to="/add-prescription" className="text-4xl text-gray-800">
@@ -32,6 +33,16 @@ const AllPrescriptions = () => {
               New Prescription
             </div>
           </Link>
+=======
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6 pr-6'>
+        <div className='bg-white rounded-3xl shadow-lg p-6 mt-4 hover:bg-gray-50'>
+          <div className='flex items-center justify-center h-full gap-2'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#c0c0c0" className="size-10">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            <Link to='/add-prescription' className='text-4xl text-[#c0c0c0] font-bold'>New Prescription</Link>
+          </div>
+>>>>>>> e2baeb72e535a84c7713ed2cdca8745d70d5ac7b
         </div>
 
         <PrescriptionBanner name={"Paracetamol"} dose={"500mg"} />
