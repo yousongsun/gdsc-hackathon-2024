@@ -24,8 +24,8 @@ const prsps = [
     prspName: "Metformin",
     amount: 500,
     dosage: 4,
-    taken: 64,
-    total: 78,
+    taken: 26,
+    total: 55,
     form: 'tablets',
     unit: 'mg'
   },
@@ -59,7 +59,7 @@ const prsps = [
     dosage: 1,
     taken: 9,
     total: 10,
-    form: 'tablets',
+    form: 'tablet',
     unit: 'mg'
   },
   {

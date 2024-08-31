@@ -58,7 +58,12 @@ const AllPrescriptions = () => {
             </Link>
           </div>
         </div>
-        <PrescriptionBanner name={"Paracetamol"} dose={"500mg"} />
+        <PrescriptionBanner name={"Amoxicillin"} dose={"400mg, 2 tablets"} hours={48} />
+        <PrescriptionBanner name={"Metformin"} dose={"500mg, 4 tablets"} hours={4} />
+        <PrescriptionBanner name={"Nivolumab"} dose={"100mg, 10ml"} hours={24} />
+        <PrescriptionBanner name={"Pembrolizumab"} dose={"25mg, 4ml"} hours={12} />
+        <PrescriptionBanner name={"Semaglutide"} dose={"3mg, 1 tablet"} hours={12} />
+        <PrescriptionBanner name={"Losartan"} dose={"50mg, 3 tablets"} hours={6} />
         {/* {prspBanners} */}
       </div>
     </div>

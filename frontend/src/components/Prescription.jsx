@@ -8,12 +8,12 @@ const Prescription = () => {
   const { name } = useParams()
   const [prescription, setPrescription] = useState({
     prescriptionName: 'Prescription 1',
-    medicationName: 'Paracetamol',
-    medicationDetails: '40mg',
-    administrationInstructions: '2 capsules per dose',
-    additionalDetails: 'take after lunch'
+    medicationName: 'Metformin',
+    medicationDetails: '500mg',
+    administrationInstructions: '4 tablets per dose',
+    additionalDetails: 'Administer with meals.'
   })
-  
+
   useEffect(() => {
     const getPrescriptionData = async () => {
       const response = await fetch(`/api/prescriptions/${name}`, {
@@ -31,7 +31,7 @@ const Prescription = () => {
 
   return (
     <div className="container p-4 mx-auto">
-        <div className="flex items-center">
+      <div className="flex items-center">
         <Link to="/">
           <img className="w-16 h-16" src={Icon} alt="Icon" />
         </Link>
@@ -39,31 +39,31 @@ const Prescription = () => {
       </div>
 
       <div className="bg-white/80 rounded-3xl shadow-lg p-6 mt-4">
-      <div className="text-3xl text-[#c0c0c0] font-bold mb-2">Every 12 hours</div>
-      <div className='flex justify-between'>
-        
-      <h2 className='text-5xl font-bold mb-2'>{prescription?.medicationName}</h2>
-        <button className='bg-primary hover:bg-purple-500 text-white font-bold py-1 px-4 rounded-3xl mt-4'>
-          Edit 
-        </button>
-      </div>
+        <div className="text-3xl text-[#c0c0c0] font-bold mb-2">Every 4 hours</div>
+        <div className='flex justify-between'>
 
-      <p className='text-xl font-bold mb-2'>{prescription?.medicationDetails}, {prescription?.administrationInstructions}</p>
+          <h2 className='text-5xl font-bold mb-2'>{prescription?.medicationName}</h2>
+          <button className='bg-primary hover:bg-purple-500 text-white font-bold py-1 px-4 rounded-3xl mt-4'>
+            Edit
+          </button>
+        </div>
 
-      <div className="p-2 w-full bg-indigo-400 rounded-2xl my-2.5">
-        <div
+        <p className='text-xl font-bold mb-2'>{prescription?.medicationDetails}, {prescription?.administrationInstructions}</p>
+
+        <div className="p-2 w-full bg-indigo-400 rounded-2xl my-2.5">
+          <div
             style={{ width: 1000 }}
             className="h-2 bg-white/90 rounded-2xl"
-        ></div>
-      </div>
+          ></div>
+        </div>
 
-      <h2 className="text-lg text-[#c0c0c0] font-bold mb-2">26/55 Doses taken</h2>
-      <p className='text-gray-800'>{prescription?.additionalDetails}</p>
+        <h2 className="text-lg text-[#c0c0c0] font-bold mb-2">26/55 Doses taken</h2>
+        <p className='text-gray-800'>{prescription?.additionalDetails}</p>
 
 
       </div>
     </div>
-    
+
   );
 };
 
