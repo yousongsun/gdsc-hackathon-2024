@@ -2,7 +2,6 @@ import React from 'react'
 
 const PrescriptionBanner = ({ name, dose }) => {
   return (
-    <div>
         <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
             <h2 className='text-lg text-gray-300 font-bold mb-2'>Prescription</h2>
             <div className='flex justify-between'>
@@ -12,7 +11,6 @@ const PrescriptionBanner = ({ name, dose }) => {
             <h2 className='text-xl font-bold mb-2'>{dose}</h2>
             <p className='text-gray-800'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et luctus enim justo sit amet diam. Vivamus at dui a mi lobortis pretium sit amet at libero. Vestibulum pharetra, lectus eu blandit rhoncus, dolor ante varius lacus, et elementum tortor urna.</p>
         </div>
-    </div>
   )
 }
 
