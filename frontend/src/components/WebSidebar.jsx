@@ -8,22 +8,22 @@ const WebSidebar = ({ sidebarVisible, setsidebarVisible }) => {
         <button className='fixed pl-12 z-20 text-white' onClick={() => setsidebarVisible(!sidebarVisible)}>≡</button>
         <div className={`${sidebarVisible ? 'flex' : 'hidden'} p-8 pt-24 pb-12 h-full flex-col justify-between fixed`}>
             <div className='flex flex-col'>
-                <Link to="/" className="font-bold p-4 py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl px-4 rounded-3xl">
+                <Link to="/" className="font-bold py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl px-3 rounded-3xl">
                     Home
                 </Link>
-                <Link to="/profile" className="font-bold p-4 py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl px-4 rounded-3xl">
+                <Link to="/profile" className="font-bold py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl px-3 rounded-3xl">
                     Profile
                 </Link>
-                <Link to="/prescriptions" className="font-bold p-4 py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl px-4 rounded-3xl">
+                <Link to="/prescriptions" className="font-bold py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl px-3 rounded-3xl">
                     Prescriptions
                 </Link>
-                <Link to="/calendar" className="font-bold p-4 py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl px-4 rounded-3xl">
+                <Link to="/calendar" className="font-bold py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl px-3 rounded-3xl">
                     Calendar
                 </Link>
             </div>
 
             
-            <Link to="/log-out" className="p-4 py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-2xl px-4 font-bold rounded-3xl">
+            <Link to="/log-out" className="p-4 py-8 text-white hover:bg-[#d2a0f9] transition-colors duration-300 text-2xl px-3 font-bold rounded-3xl">
                 Log Out
             </Link>
         </div>

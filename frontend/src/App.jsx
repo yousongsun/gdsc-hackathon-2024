@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="w-full h-full bg-gradient-to-r from-purple-400 to-primary flex">
+      <div className="w-full h-full bg-gradient-to-r from-[#94b9ff] to-[#7751b5] flex">
         <WebSidebar
           sidebarVisible={sidebarVisible}
           setsidebarVisible={setsidebarVisible}
