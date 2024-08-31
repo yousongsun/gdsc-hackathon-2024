@@ -1,6 +1,8 @@
 import React from "react";
 import CatIcon from "../assets/icon.jpg";
 import HomePrspItem from "./HomePrspItem";
+import { Link } from 'react-router-dom'
+
 const prsps = [
   {
     hours: 3,
@@ -33,7 +35,7 @@ const Homepage = () => {
   return (
     <div className="container p-4 mx-auto">
       <div className="flex items-center">
-        <img className="w-16 h-16" src={CatIcon} alt="Icon" />
+        <Link to="/"><img className="w-16 h-16" src={CatIcon} alt="Icon" /></Link>
         <div className="text-3xl text-white font-bold">
           Good Morning, Google Developers
         </div>

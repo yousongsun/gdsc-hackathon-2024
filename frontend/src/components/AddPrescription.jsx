@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import Icon from '../assets/icon.jpg'
 
 const AddPrescription = () => {
@@ -7,7 +7,7 @@ const AddPrescription = () => {
     <>
       <div className='container p-4 mx-auto'>
         <div className='flex items-center'>
-          <img className='w-16 h-16' src={Icon} alt="Icon" />
+          <Link to="/"><img className='w-16 h-16' src={Icon} alt="Icon" /></Link>
           <div className='text-3xl text-white font-bold'>New Prescription</div>
         </div>
 
