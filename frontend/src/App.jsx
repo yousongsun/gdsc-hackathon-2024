@@ -16,26 +16,58 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <div
+        className={`${
+          isLoggedIn && "w-screen"
+        }w-full h-full animate-gradient-x bg-gradient-to-r from-[#94b9ff] via-violet-400 to-[#67c5d3] flex`}
+      >
+        {isLoggedIn && (
+          <WebSidebar
+            sidebarVisible={sidebarVisible}
+            setsidebarVisible={setsidebarVisible}
+            setIsLoggedIn={setIsLoggedIn}
+          />
+        )}
 
-      <div className={`${isLoggedIn && 'w-screen'}w-full h-full animate-gradient-x bg-gradient-to-r from-[#94b9ff] via-violet-400 to-[#67c5d3] flex`}>
-        {isLoggedIn && <WebSidebar
-          sidebarVisible={sidebarVisible}
-          setsidebarVisible={setsidebarVisible}
-          setIsLoggedIn={setIsLoggedIn}
-        />}
-        
-        <div className={`${sidebarVisible ? "w-4/5" : "w-full"} ease-in-out duration-100 transition-all`}>
+        <div
+          className={`${
+            sidebarVisible ? "w-4/5" : "w-full"
+          } ease-in-out duration-100 transition-all`}
+        >
           <Routes>
-            <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-            <Route path="*" element={isLoggedIn ? <Homepage /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
-            <Route path="/" element={isLoggedIn ? <Homepage /> : <Login setIsLoggedIn={setIsLoggedIn}/>}  />
+            <Route
+              path="/login"
+              element={<Login setIsLoggedIn={setIsLoggedIn} />}
+            />
+            <Route
+              path="*"
+              element={
+                isLoggedIn ? (
+                  <Homepage />
+                ) : (
+                  <Login setIsLoggedIn={setIsLoggedIn} />
+                )
+              }
+            />
+            <Route
+              path="/"
+              element={
+                isLoggedIn ? (
+                  <Homepage />
+                ) : (
+                  <Login setIsLoggedIn={setIsLoggedIn} />
+                )
+              }
+            />
             <Route path="/profile" element={<Profile />} />
             <Route path="/prescriptions" element={<AllPrescriptions />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/add-prescription" element={<AddPrescription />} />
             <Route path="/prescriptions/:id" element={<Prescription />} />
-            <Route path="/logout" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-
+            <Route
+              path="/logout"
+              element={<Login setIsLoggedIn={setIsLoggedIn} />}
+            />
           </Routes>
         </div>
       </div>
@@ -45,4 +77,6 @@ const App = () => {
 };
 
 export default App;
-<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div></div>
+<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+  <div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div>
+</div>;
