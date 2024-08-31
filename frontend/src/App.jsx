@@ -12,13 +12,12 @@ const App = () => {
 
   const [sidebarVisible, setsidebarVisible] = useState(false)
 
-
   return (
     
     <BrowserRouter>
       <div className = 'w-screen h-screen bg-primary flex'>
         <WebSidebar sidebarVisible={sidebarVisible} setsidebarVisible={setsidebarVisible} />
-        <div className={`${sidebarVisible ? 'w-3/4' : 'w-full'}`}>
+        <div className={`${sidebarVisible ? 'w-3/4' : 'w-full'} py-20 px-2`}>
             <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/profile" element={<Profile />} />
