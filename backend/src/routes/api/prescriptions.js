@@ -11,6 +11,15 @@ router.get("/", async (req, res) => {
     res.status(400).json({ message: "Could not retrieve prescriptions" });
   }
 });
+router.get("/:name", async (req, res) => {
+  try {
+    const prsps = await Prescription.find({ medicationName: req.params.name });
+    res.status(200).json(prsps);
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({ message: "Could not retrieve prescriptions" });
+  }
+});
 
 router.post("/", async (req, res) => {
   const newPrsp = req.body;

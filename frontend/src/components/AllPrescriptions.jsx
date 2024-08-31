@@ -5,11 +5,13 @@ import Icon from "../assets/icon.jpg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { PRECRIPTION_URL } from "../api/urls";
+
 const AllPrescriptions = () => {
   const [allPrsps, setAllPrsps] = useState([]);
   const getAllPrsps = async () => {
     await axios.get(PRECRIPTION_URL).then((res) => {
       setAllPrsps(res.data);
+      console.log(allPrsps);
     });
   };
   useEffect(() => {

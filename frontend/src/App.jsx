@@ -7,6 +7,7 @@ import AddPrescription from "./components/AddPrescription";
 import "./App.css";
 import WebSidebar from "./components/WebSidebar";
 import Profile from "./components/Profile";
+import Prescription from "./components/Prescription";
 
 const App = () => {
   const [sidebarVisible, setsidebarVisible] = useState(false);
@@ -21,11 +22,13 @@ const App = () => {
         />
         <div className={`${sidebarVisible ? "w-4/5" : "w-full"} ease-in-out duration-100 transition-all`}>
           <Routes>
+            <Route path="*" element={<Homepage />} />
             <Route path="/" element={<Homepage />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/prescriptions" element={<AllPrescriptions />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/add-prescription" element={<AddPrescription />} />
+            <Route path="/prescriptions/:id" element={<Prescription />} />
           </Routes>
         </div>
       </div>
