@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Prescriptions = () => {
+const AllPrescriptions = () => {
   return (
     <div>Prescriptions</div>
   )
 }
 
-export default Prescriptions
+export default AllPrescriptions
