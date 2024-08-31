@@ -12,4 +12,10 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.post("/", async (req, res) => {
+  const newPrsp = req.body;
+  const p = await Prescription.create(newPrsp);
+  res.status(201).json(p);
+});
+
 export default router;

@@ -17,8 +17,14 @@ const AllPrescriptions = () => {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#c0c0c0" className="size-10">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
             </svg>
-            <Link to='/add-prescription' className='text-4xl text-[#c0c0c0] font-bold'>New Prescription</Link>
+            <Link
+              to="/add-prescription"
+              className="text-4xl text-[#c0c0c0] font-bold"
+            >
+              New Prescription
+            </Link>
           </div>
+>>>>>>> e2baeb72e535a84c7713ed2cdca8745d70d5ac7b
         </div>
 
         <PrescriptionBanner name={"Paracetamol"} dose={"500mg"} />
