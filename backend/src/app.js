@@ -6,6 +6,7 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
+import mongoose from "mongoose";
 
 // Set's our port to the PORT environment variable, or 3000 by default if the env is not configured.
 const PORT = process.env.PORT ?? 3000;
@@ -40,6 +41,10 @@ app.use("/", routes);
 // await getDatabase();
 
 // Start the server running.
-app.listen(PORT, () => {
-    console.log(`PGCIT Final Project server listening on port ${PORT}`);
-});
+mongoose
+    .connect(process.env.DB_URL)
+    .then(() =>
+        app.listen(PORT, () => {
+            console.log(`PGCIT Final Project server listening on port ${PORT}`);
+        })
+    );
