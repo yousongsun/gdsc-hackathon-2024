@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { PRECRIPTION_URL } from "../api/urls";
 import Icon from "../assets/icon.jpg";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const AddPrescription = () => {
   const [prescriptionName, setPrescriptionName] = useState("");
@@ -42,7 +43,9 @@ const AddPrescription = () => {
     <>
       <div className="container p-4 mx-auto">
         <div className="flex items-center">
-          <img className="w-16 h-16" src={Icon} alt="Icon" />
+          <Link to="/">
+            <img className="w-16 h-16" src={Icon} alt="Icon" />
+          </Link>
           <div className="text-3xl text-white font-bold">New Prescription</div>
         </div>
 

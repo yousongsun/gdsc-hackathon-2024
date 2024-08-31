@@ -21,11 +21,13 @@ const App = () => {
         />
         <div className={`${sidebarVisible ? "w-3/4" : "w-full"} ease-in-out duration-100 transition-all`}>
           <Routes>
+            <Route path="*" element={<Homepage />} />
             <Route path="/" element={<Homepage />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/prescriptions" element={<AllPrescriptions />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/add-prescription" element={<AddPrescription />} />
+            <Route path="/prescriptions/:id" element={<AddPrescription />} />
           </Routes>
         </div>
       </div>
