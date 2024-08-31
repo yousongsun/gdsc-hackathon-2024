@@ -12,7 +12,7 @@ const Calendar = () => {
     <div className='container p-4 mx-auto'>
       <div className='flex flex-col'>
         <div className='text-3xl flex max-h-full text-white font-bold items-center'>
-          <Link to="/"><img className='w-16 h-16' src={Icon} alt="Icon" /></Link>
+          <Link to="/"><img className='w-16 h-16 mr-2' src={Icon} alt="Icon" /></Link>
           <h1 className='text-3xl'>Calendar</h1>
         </div>
         <div className='pt-10 text-xl max-w-max text-white font-bold border-none'>

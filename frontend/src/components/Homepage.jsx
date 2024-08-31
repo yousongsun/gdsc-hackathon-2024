@@ -84,7 +84,7 @@ const Homepage = () => {
   return (
     <div className="container p-4 mx-auto">
       <div className="flex items-center">
-        <Link to="/"><img className="w-16 h-16" src={CatIcon} alt="Icon" /></Link>
+        <Link to="/"><img className="w-16 h-16 mr-2" src={CatIcon} alt="Icon" /></Link>
         <div className="text-3xl text-white font-bold">
           Good Morning, {first_name} {last_name}
         </div>

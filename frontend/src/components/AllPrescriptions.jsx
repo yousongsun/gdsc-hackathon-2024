@@ -30,11 +30,11 @@ const AllPrescriptions = () => {
   return (
     <div className="container p-4 mx-auto">
       <div className="flex items-center">
-        <Link to="/"><img className="w-16 h-16" src={Icon} alt="Icon" /></Link>
+        <Link to="/"><img className="w-16 h-16 mr-2" src={Icon} alt="Icon" /></Link>
         <div className="text-3xl text-white font-bold">My Prescriptions</div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pr-6">
-        <div className="bg-white/60 rounded-3xl shadow-lg p-6 mt-4 ">
+        <div className="bg-white/60 duration-200 hover:bg-white/90 rounded-3xl shadow-lg p-6 mt-4 ">
           <div className="flex items-center justify-center h-full gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

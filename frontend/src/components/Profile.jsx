@@ -8,7 +8,7 @@ const Profile = () => {
     <>
       <div className='container p-4 mx-auto'>
         <div className='flex items-center'>
-          <Link to="/"><img className='w-16 h-16' src={Icon} alt="Icon" /></Link>
+          <Link to="/"><img className='w-16 h-16 mr-2' src={Icon} alt="Icon" /></Link>
           <div className='text-3xl text-white font-bold'>My Account</div>
         </div>
         <div className='bg-white/60 rounded-3xl shadow-lg p-6 mt-4'>
