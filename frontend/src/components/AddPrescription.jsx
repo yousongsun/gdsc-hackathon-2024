@@ -23,14 +23,21 @@ const AddPrescription = () => {
 
           <div className='flex flex-col'>
             <div>
-              <h2 className='text-xl font-bold mb-2'>Medication</h2>
+              <h2 className='text-xl font-bold mb-2'>Medication name</h2>
               <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text</p>
             </div>
 
             <hr className='my-4' />
 
             <div>
-              <h2 className='text-xl font-bold mb-2'>Signature (Sig)</h2>
+              <h2 className='text-xl font-bold mb-2'>Medication details (dosage / form / quantity)</h2>
+              <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text</p>
+            </div>
+
+            <hr className='my-4' />
+
+            <div>
+              <h2 className='text-xl font-bold mb-2'>Administration instructions</h2>
               <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text</p>
             </div>
 
