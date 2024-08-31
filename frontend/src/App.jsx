@@ -8,26 +8,27 @@ import "./App.css";
 import WebSidebar from "./components/WebSidebar";
 
 const App = () => {
-
-  const [sidebarVisible, setsidebarVisible] = useState(false)
+  const [sidebarVisible, setsidebarVisible] = useState(false);
 
   return (
-    
-    <div className = 'w-screen h-screen bg-primary'>
-      <button className='text-white' onClick={() => setsidebarVisible(!sidebarVisible)}>Toggle Sidebar</button>
+    <div className="w-screen h-screen bg-primary overflow-scroll">
+      <button
+        className="text-white"
+        onClick={() => setsidebarVisible(!sidebarVisible)}
+      >
+        Toggle Sidebar
+      </button>
       <WebSidebar sidebarVisible={sidebarVisible} />
       <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/prescriptions" element={<Prescriptions />} />
-            <Route path="/add-rescription" element={<AddPrescription />} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/prescriptions" element={<Prescriptions />} />
+          <Route path="/add-rescription" element={<AddPrescription />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
 };
-
-
 
 export default App;
