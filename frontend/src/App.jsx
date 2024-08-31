@@ -8,6 +8,7 @@ import "./App.css";
 
 const App = () => {
   return (
+
     <BrowserRouter>
       <div>
         <Routes>
@@ -20,5 +21,7 @@ const App = () => {
     </BrowserRouter>
   );
 };
+}
+
 
 export default App;
