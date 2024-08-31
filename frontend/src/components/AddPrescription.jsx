@@ -50,12 +50,12 @@ const AddPrescription = () => {
         </div>
 
         <div className="bg-white/80 rounded-3xl shadow-lg p-6 mt-4">
-          <h2 className="text-lg text-[#c0c0c0] font-bold mb-2">
+          <h2 className="text-2xl font-bold mb-2">
             Create a new prescription
           </h2>
           <div className="flex justify-between">
-            <input
-              placeholder="Prescription Name"
+            <input className="rounded-3xl p-2"
+              placeholder=" Enter Prescription Name"
               type="text"
               value={prescriptionName}
               onChange={(e) => setPrescriptionName(e.target.value)}
@@ -77,8 +77,8 @@ const AddPrescription = () => {
           <div className="flex flex-col">
             <div>
               <h2 className="text-xl font-bold mb-2">Medication name</h2>
-              <input
-                placeholder="Medication Name"
+              <input className="rounded-3xl p-2"
+                placeholder=" Enter medication name"
                 type="text"
                 value={medicationName}
                 onChange={(e) => setMedicationName(e.target.value)}
@@ -91,8 +91,8 @@ const AddPrescription = () => {
               <h2 className="text-xl font-bold mb-2">
                 Medication details (dosage / form / quantity)
               </h2>
-              <input
-                placeholder="Medication details"
+              <input className="rounded-3xl p-2"
+                placeholder="Enter medication details"
                 type="text"
                 value={medicationDetails}
                 onChange={(e) => setMedicationDetails(e.target.value)}
@@ -105,8 +105,8 @@ const AddPrescription = () => {
               <h2 className="text-xl font-bold mb-2">
                 Administration instructions
               </h2>
-              <input
-                placeholder="dministration instructions"
+              <input className="rounded-3xl p-2"
+                placeholder=" Enter administration instructions"
                 type="text"
                 value={administrationInstructions}
                 onChange={(e) => setAdminInstruc(e.target.value)}
@@ -117,8 +117,8 @@ const AddPrescription = () => {
 
             <div>
               <h2 className="text-xl font-bold mb-2">Additional details</h2>
-              <input
-                placeholder="Additional details"
+              <input className="rounded-3xl p-2"
+                placeholder="additional details"
                 type="text"
                 value={additionalDetails}
                 onChange={(e) => setAdditionalDetails(e.target.value)}
@@ -129,7 +129,7 @@ const AddPrescription = () => {
 
             <div>
               <h2 className="text-xl font-bold mb-2">Last Taken Time</h2>
-              <input
+              <input className="rounded-3xl p-2"
                 placeholder="Last Taken Time"
                 type="text"
                 value={lastTakenTime}
