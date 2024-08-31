@@ -1,111 +1,20 @@
 import React from 'react'
+import Prescription from './Prescription'
+import PrescriptionBanner from './PrescriptionBanner'
 
 const AllPrescriptions = () => {
   return (
-    <>
-      <div className='container p-4 mx-auto'>
-        <div className='flex items-center'>
-          <img className='w-16 h-16' src={Icon} alt="Icon" />
-          <div className='text-3xl text-white font-bold'>Your prescriptions</div>
-        </div>
-
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 pr-6'>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-          <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
-            <h2 className='text-lg text-gray-300 font-bold mb-2'>Every 12 Hours</h2>
-            <div className='flex justify-between'>
-              <h2 className='text-3xl font-bold mb-2'>Prescription Name</h2>
-            </div>
-            <h2 className='text-xl font-bold mb-2'>40mg, 2 Capsules</h2>
-            <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text </p>
-          </div>
-
-        </div>
-
-
-      </div>
-    </>
+    <div className = 'flex flex-row flex-wrap'>
+      <h1 className='text-5xl font-bold text-gray-300'>Prescriptions</h1>
+      <PrescriptionBanner name={'Paracetamol'} dose={'500mg'} />
+      <PrescriptionBanner name={'Ibuprofen'} dose={'200mg'} />
+      <PrescriptionBanner name={'Aspirin'} dose={'100mg'} />
+      <PrescriptionBanner name={'Amoxicillin'} dose={'500mg'} />
+      <PrescriptionBanner name={'Azithromycin'} dose={'500mg'} />
+      <PrescriptionBanner name={'Ciprofloxacin'} dose={'500mg'} />
+      <PrescriptionBanner name={'Doxycycline'} dose={'100mg'} />
+      <PrescriptionBanner name={'Metronidazole'} dose={'500mg'} />
+    </div>
   )
 }
 
