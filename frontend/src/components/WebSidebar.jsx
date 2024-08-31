@@ -8,16 +8,16 @@ const WebSidebar = ({ sidebarVisible, setsidebarVisible }) => {
             <button className='fixed pl-12' onClick={() => setsidebarVisible(!sidebarVisible)}>≡</button>
             <div className={`${sidebarVisible ? 'flex' : 'hidden'} p-8 py-12 h-full flex-col justify-between fixed`}>
                 <div className='flex flex-col'>
-                    <Link to="/" className="p-4 text-white rounded-3xl hover:bg-gray-700 text-5xl font-bold">
+                    <Link to="/" className="p-4 text-white rounded-3xl hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl py-2 px-4 font-bold">
                         Home
                     </Link>
-                    <Link to="/profile" className="p-4 text-white rounded-3xl hover:bg-gray-700 text-5xl font-bold">
+                    <Link to="/profile" className="p-4 text-white rounded-3xl hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl py-2 px-4 font-bold">
                         Profile
                     </Link>
-                    <Link to="/prescriptions" className="p-4 text-white rounded-3xl hover:bg-gray-700 text-5xl font-bold">
+                    <Link to="/prescriptions" className="p-4 text-white rounded-3xl hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl py-2 px-4 font-bold">
                         Prescriptions
                     </Link>
-                    <Link to="/calendar" className="p-4 text-white rounded-3xl hover:bg-gray-700 text-5xl font-bold">
+                    <Link to="/calendar" className="p-4 text-white rounded-3xl hover:bg-[#d2a0f9] transition-colors duration-300 text-5xl py-2 px-4 font-bold">
                         Calendar
                     </Link>
                 </div>
