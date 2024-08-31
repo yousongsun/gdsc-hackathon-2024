@@ -2,7 +2,7 @@ import React from 'react'
 
 const Prescription = ({ name, dose, info }) => {
   return (
-    <div className='bg-white rounded-3xl shadow-lg p-6 mt-4'>
+    <div className='bg-white/80 rounded-3xl shadow-lg p-6 mt-4'>
       <h2 className='text-lg text-white font-bold mb-2'>Prescription</h2>
       <div className='flex justify-between'>
         <h2 className='text-3xl font-bold mb-2'>{name}</h2>

@@ -26,7 +26,7 @@ const prsps = [
 
 const Homepage = () => {
   const prescriptions = prsps.map((p, index) => (
-    <div key={index} className="bg-white my-4 p-6 rounded-3xl h-64">
+    <div key={index} className="bg-white/80 my-4 p-6 rounded-3xl h-64">
       <HomePrspItem prspInfo={p} />
     </div>
   ));
