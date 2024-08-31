@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const PrescriptionBanner = ({ name, dose, hours }) => {
   return (
     <Link to={`/prescriptions/${name}`}>
-      <div className="bg-white/60 rounded-3xl shadow-lg p-6 mt-4">
+      <div className="bg-white/60 hover:bg-white/90 duration-200 rounded-3xl shadow-lg p-6 mt-4">
         <h2 className="text-lg text-[#666666] font-bold mb-2">
           Every {hours} Hours
         </h2>

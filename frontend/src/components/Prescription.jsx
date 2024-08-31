@@ -39,7 +39,7 @@ const Prescription = () => {
           <div className="text-3xl text-white font-bold">Prescription Details</div>
         </div>
           <div className="bg-white/80 rounded-3xl shadow-lg p-6 mt-4 h-dvh">
-            <div className="text-3xl text-[#c0c0c0] font-bold mb-2">Every 12 hours</div>
+            <div className="text-3xl text-[#c0c0c0] font-bold mb-2">Every 4 hours</div>
             <div className="flex justify-between">
               <h2 className="text-5xl font-bold mb-2">{prescription?.medicationName}</h2>
               <div className = 'w-52 flex justify-between'>
