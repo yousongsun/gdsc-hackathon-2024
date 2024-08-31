@@ -1,0 +1,1 @@
+DB_URL='mongodb+srv://HACKBAR:hackbar123@cluster0.cpbyn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
