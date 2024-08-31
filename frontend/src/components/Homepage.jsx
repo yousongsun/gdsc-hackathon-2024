@@ -11,8 +11,20 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="bg-white my-4 rounded-xl h-64">prescription1</div>
-      <div className="bg-white my-4 rounded-xl h-64">prescription1</div>
+      <div className="bg-white my-4 p-6 rounded-3xl h-64">
+        <div className="text-gray-400 text-xl">In 3 hours, 40 minutes</div>
+        <div className="text-4xl">Prescription Name</div>
+        <div>40mg, 2 capsules</div>
+        <div className="text-gray-400 text-xl">26/55 taken</div>
+        <div>details</div>
+      </div>
+      <div className="bg-white my-4 p-6 rounded-3xl h-64">
+        <div className="text-gray-400 text-xl">In 3 hours, 40 minutes</div>
+        <div className="text-4xl">Prescription Name</div>
+        <div>40mg, 2 capsules</div>
+        <div className="text-gray-400 text-xl">26/55 taken</div>
+        <div>details</div>
+      </div>
     </div>
   );
 };
