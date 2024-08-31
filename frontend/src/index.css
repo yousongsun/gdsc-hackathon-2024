@@ -45,6 +45,17 @@
   /* Remove all borders */
 }
 
+.fc-event {
+  height: 1.15rem; /* Adjust this value to your desired height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8vw;
+  border-radius: 50px;
+  line-height: 50px; /* Align text vertically within the event box */
+  overflow: hidden; /* Ensure content stays within the box */
+}
+
 .fc .fc-col-header-cell {
   background-color: #818cf899;
   color: #666666;
