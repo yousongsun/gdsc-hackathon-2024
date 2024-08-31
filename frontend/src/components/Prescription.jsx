@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 const Prescription = () => {
 
   const { name } = useParams()
+  const [dosesTaken, setDosesTaken] = useState(0)
+  const [dosesTotal, setDosesTotal] = useState(24)
   const [prescription, setPrescription] = useState({
     prescriptionName: 'Prescription 1',
     medicationName: 'Paracetamol',
@@ -21,7 +23,6 @@ const Prescription = () => {
       })
 
       const prescriptionData = await response.json()
-      console.log(prescriptionData)
       setPrescription(prescriptionData)
     }
 
@@ -30,40 +31,45 @@ const Prescription = () => {
   }, [])
 
   return (
-    <div className="container p-4 mx-auto">
+    <div className="p-4 mx-auto">
         <div className="flex items-center">
-        <Link to="/">
-          <img className="w-16 h-16" src={Icon} alt="Icon" />
-        </Link>
-        <div className="text-3xl text-white font-bold">Prescription Details</div>
+          <Link to="/">
+            <img className="w-16 h-16" src={Icon} alt="Icon" />
+          </Link>
+          <div className="text-3xl text-white font-bold">Prescription Details</div>
+        </div>
+          <div className="bg-white/80 rounded-3xl shadow-lg p-6 mt-4 h-dvh">
+            <div className="text-3xl text-[#c0c0c0] font-bold mb-2">Every 12 hours</div>
+            <div className="flex justify-between">
+              <h2 className="text-5xl font-bold mb-2">{prescription?.medicationName}</h2>
+              <div className = 'w-52 flex justify-between'>
+                <button className='text-5xl' onClick={() => {if(dosesTaken < dosesTotal){setDosesTaken(dosesTaken+1)}}}>
+                  +
+                </button>
+                <button className='text-5xl' onClick={() => {if(dosesTaken < dosesTotal){setDosesTaken(dosesTaken-1)}}}>
+                  -
+                </button>  
+                <button className="bg-primary hover:bg-purple-500 text-white font-bold py-1 px-4 rounded-3xl mt-4 text-3xl">
+                  Edit
+                </button>
+              </div>
+            </div>
+
+          <p className="text-xl font-bold mb-2">
+            {prescription?.medicationDetails}, {prescription?.administrationInstructions}
+          </p>
+
+          <div className="p-2 w-full bg-indigo-400 rounded-2xl my-2.5">
+            <div
+             style={{ width: `${(dosesTaken / dosesTotal) * 100}%` }}
+              className="h-2 bg-white/90 rounded-2xl"
+            ></div>
+          </div>
+            <h2 className="text-lg text-[#c0c0c0] font-bold mb-2">{dosesTaken}/{dosesTotal} Doses taken</h2>
+            <p className="text-gray-800">{prescription?.additionalDetails}</p>
+          </div>
       </div>
 
-      <div className="bg-white/80 rounded-3xl shadow-lg p-6 mt-4">
-      <div className="text-3xl text-[#c0c0c0] font-bold mb-2">Every 12 hours</div>
-      <div className='flex justify-between'>
-        
-      <h2 className='text-5xl font-bold mb-2'>{prescription?.medicationName}</h2>
-        <button className='bg-primary hover:bg-purple-500 text-white font-bold py-1 px-4 rounded-3xl mt-4'>
-          Edit 
-        </button>
-      </div>
-
-      <p className='text-xl font-bold mb-2'>{prescription?.medicationDetails}, {prescription?.administrationInstructions}</p>
-
-      <div className="p-2 w-full bg-indigo-400 rounded-2xl my-2.5">
-        <div
-            style={{ width: 1000 }}
-            className="h-2 bg-white/90 rounded-2xl"
-        ></div>
-      </div>
-
-      <h2 className="text-lg text-[#c0c0c0] font-bold mb-2">26/55 Doses taken</h2>
-      <p className='text-gray-800'>{prescription?.additionalDetails}</p>
-
-
-      </div>
-    </div>
-    
   );
 };
 
