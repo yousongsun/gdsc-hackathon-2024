@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-const WebSidebar = ({ sidebarVisible, setsidebarVisible }) => {
+const WebSidebar = ({ sidebarVisible, setsidebarVisible, setIsLoggedIn }) => {
+
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        setIsLoggedIn(false)
+        navigate('/login')
+    }
 
     return (
         <div className={`${sidebarVisible ? 'w-1/5' : 'w-1/12'} ease-in-out duration-100 transition-all p-4 flex-col h-screen text-5xl items-center`}>
@@ -23,7 +30,7 @@ const WebSidebar = ({ sidebarVisible, setsidebarVisible }) => {
                 </div>
 
 
-                <Link to="/log-out" className="p-4 py-8 text-white hover:bg-indigo-400 transition-colors text-2xl px-4 font-bold rounded-3xl">
+                <Link to="/logout" onClick= {handleLogout} className="p-4 py-8 text-white hover:bg-indigo-400 transition-colors text-2xl px-4 font-bold rounded-3xl">
                     Log Out
                 </Link>
             </div>
