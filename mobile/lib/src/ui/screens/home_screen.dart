@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
             end: Alignment.bottomRight,
           ),
         ),
-        padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 24.0), // p-6
+        padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 24.0),
         child: SingleChildScrollView(
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -294,6 +294,7 @@ class HomeScreen extends StatelessWidget {
                 },
                 child: const Text('My prescriptions'),
               ),
+              SizedBox(height: 20.0),
             ])),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -309,7 +310,7 @@ class HomeScreen extends StatelessWidget {
           } else if (index == 1) {
             Navigator.pushNamed(context, '/calendar');
           } else if (index == 2) {
-            Navigator.pushNamed(context, '/prescriptions');
+            Navigator.pushNamed(context, '/profile');
           }
         },
       ),
@@ -324,7 +325,7 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Second Screen'),
+        title: const Text('My Prescriptions'),
       ),
       body: const Center(
         child: Text(
@@ -345,7 +346,7 @@ class SecondScreen extends StatelessWidget {
           } else if (index == 1) {
             Navigator.pushNamed(context, '/calendar');
           } else if (index == 2) {
-            Navigator.pushNamed(context, '/prescriptions');
+            Navigator.pushNamed(context, '/profile');
           }
         },
       ),
