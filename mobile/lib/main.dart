@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'src/ui/screens/login_screen.dart';
 import 'src/ui/screens/home_screen.dart';
 import 'src/ui/screens/calendar_screen.dart';
 import 'src/ui/screens/prescriptions_screen.dart';
 import 'src/ui/screens/profile_screen.dart';
+import 'src/ui/screens/camera_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
         '/calendar': (context) => CalendarScreen(),
         '/prescriptions': (context) => PrescriptionsScreen(),
         '/profile': (context) => ProfileScreen(),
+        '/login': (context) => LoginScreen(),
+        '/camera': (context) => CameraScreen(),
       },
     );
   }

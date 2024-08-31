@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import '../../utils/utils.dart';
 
 
@@ -118,6 +119,29 @@ class _CalendarScreenState extends State<CalendarScreen> {
               ),
               SizedBox(height: 20.0),
             ])),
+      ),
+      floatingActionButton: SpeedDial(
+        icon: Icons.add,
+        activeIcon: Icons.close,
+        backgroundColor: Colors.blue,
+        overlayColor: Colors.black,
+        overlayOpacity: 0.5,
+        children: [
+          SpeedDialChild(
+            child: Icon(Icons.event),
+            label: 'Add Event',
+            onTap: () {
+              // Handle event addition logic
+            },
+          ),
+          SpeedDialChild(
+            child: Icon(Icons.note_add),
+            label: 'Add Note',
+            onTap: () {
+              // Handle note addition logic
+            },
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
