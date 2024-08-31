@@ -1,6 +1,6 @@
 function HomePrspItem(props) {
   const { prspInfo } = props;
-  const { hours, minutes, prspName, weight, capsules, taken, total } =
+  const { hours, minutes, prspName, amount, dosage, taken, total, unit, form } =
     prspInfo;
   const lengthOfTaken = (taken / total) * 100;
   return (
@@ -10,7 +10,7 @@ function HomePrspItem(props) {
       </div>
       <div className="text-5xl font-bold mb-2">{prspName}</div>
       <div className="text-lg font-semibold">
-        {weight}mg, {capsules} capsules
+        {amount}{unit}, {dosage} {form}
       </div>
       <div className="p-2 w-full bg-indigo-400 rounded-2xl my-2.5">
         <div
@@ -19,7 +19,7 @@ function HomePrspItem(props) {
         ></div>
       </div>
       <div className="text-gray-400 font-semibold text-xl">
-        {taken}/{total} taken
+        {taken}/{total} doses taken
       </div>
     </>
   );

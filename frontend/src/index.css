@@ -23,11 +23,17 @@
   color: #666666;
   margin: 3px;
   background-color: rgba(255, 255, 255, 60%);
+  transition: 0.2s;
 }
+
+.fc .fc-daygrid-day-frame:hover {
+  background-color: rgba(255, 255, 255, 90%);
+}
+
 
 .fc .fc-daygrid-day.fc-day-today {
   border-radius: 10px;
-  border: 1px white;
+  background-color: rgb(193, 160, 255);
 }
 
 .fc .fc-scrollgrid,
@@ -39,21 +45,12 @@
   /* Remove all borders */
 }
 
+.fc .fc-col-header-cell {
+  background-color: #818cf899;
+  color: #666666;
+}
+
 .fc td[role="presentation"] {
   border: none;
   /* Remove any borders */
-}
-
-.glow-overlay {
-  --glow-size: 25rem;
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  user-select: none;
-  opacity: var(--glow-opacity, 0);
-  mask: radial-gradient(var(--glow-size) var(--glow-size) at var(--glow-x) var(--glow-y),
-      var(--glow-color) 1%,
-      transparent 50%);
-  transition: 400ms mask ease;
-  will-change: mask;
 }
