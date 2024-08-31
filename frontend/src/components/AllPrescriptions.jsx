@@ -11,6 +11,7 @@ const AllPrescriptions = () => {
   const getAllPrsps = async () => {
     await axios.get(PRECRIPTION_URL).then((res) => {
       setAllPrsps(res.data);
+      console.log(allPrsps);
     });
   };
   useEffect(() => {
@@ -29,7 +30,9 @@ const AllPrescriptions = () => {
   return (
     <div className="container p-4 mx-auto">
       <div className="flex items-center">
-        <Link to="/"><img className="w-16 h-16" src={Icon} alt="Icon" /></Link>
+        <Link to="/">
+          <img className="w-16 h-16" src={Icon} alt="Icon" />
+        </Link>
         <div className="text-3xl text-white font-bold">Your Prescriptions</div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pr-6">
