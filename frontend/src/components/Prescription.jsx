@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Icon from "../assets/icon.jpg";
 import { Link } from "react-router-dom";
+import Confetti from 'react-confetti'
 
 const Prescription = () => {
 
@@ -32,6 +33,7 @@ const Prescription = () => {
 
   return (
     <div className="p-4 mx-auto">
+      {dosesTaken === dosesTotal && <Confetti />}
       <div className="flex items-center">
         <Link to="/">
           <img className="w-16 h-16 mr-2" src={Icon} alt="Icon" />
