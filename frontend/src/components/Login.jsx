@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../contextProvider/Auth";
+import { PATIENT, DOCTOR } from "../utils/constants/userTypes.js";
 
 const Login = ({ setIsLoggedIn }) => {
+  const { role, setRole } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("patient");
+  const [formRole, setFormRole] = useState(PATIENT);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setRole(formRole);
     setIsLoggedIn(true);
+    console.log(role);
     navigate("/");
   };
 
@@ -53,11 +58,11 @@ const Login = ({ setIsLoggedIn }) => {
               <div className="flex items-center">
                 <input
                   type="radio"
-                  id="patient"
+                  id={PATIENT}
                   name="role"
-                  value="patient"
-                  checked={role === "patient"}
-                  onChange={(e) => setRole(e.target.value)}
+                  value={PATIENT}
+                  checked={formRole === PATIENT}
+                  onChange={(e) => setFormRole(e.target.value)}
                   className="mr-2"
                 />
                 <label htmlFor="patient" className="mr-4">
@@ -65,11 +70,11 @@ const Login = ({ setIsLoggedIn }) => {
                 </label>
                 <input
                   type="radio"
-                  id="doctor"
+                  id={DOCTOR}
                   name="role"
-                  value="doctor"
-                  checked={role === "doctor"}
-                  onChange={(e) => setRole(e.target.value)}
+                  value={DOCTOR}
+                  checked={formRole === DOCTOR}
+                  onChange={(e) => setFormRole(e.target.value)}
                   className="mr-2"
                 />
                 <label htmlFor="doctor">Doctor</label>
