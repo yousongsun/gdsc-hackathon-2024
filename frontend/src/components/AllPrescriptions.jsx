@@ -29,7 +29,7 @@ const AllPrescriptions = () => {
   return (
     <div className="container p-4 mx-auto">
       <div className="flex items-center">
-        <img className="w-16 h-16" src={Icon} alt="Icon" />
+        <Link to="/"><img className="w-16 h-16" src={Icon} alt="Icon" /></Link>
         <div className="text-3xl text-white font-bold">Your Prescriptions</div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pr-6">
@@ -57,7 +57,7 @@ const AllPrescriptions = () => {
             </Link>
           </div>
         </div>
-
+        <PrescriptionBanner name={"Paracetamol"} dose={"500mg"} />
         {prspBanners}
       </div>
     </div>

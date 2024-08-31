@@ -2,30 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* These four set scroll bar */
-/* width */
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: purple;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: plum;
-}
-
 .fc {
-  width: 100% !important; /* Ensure the calendar spans the full width of its container */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  width: 100% !important;
+  /* Ensure the calendar spans the full width of its container */
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width and height */
 }
 
 .fc .fc-col-header-cell-cushion {
@@ -34,28 +15,33 @@
 }
 
 .fc .fc-daygrid-day-frame {
-  border-radius: 10px; /* Adjust the radius as needed */
-  overflow: hidden; /* Ensure the content stays within the rounded corners */
-  border: 1px solid #818cf8;
+  border-radius: 10px;
+  /* Adjust the radius as needed */
+  overflow: hidden;
+  /* Ensure the content stays within the rounded corners */
+  border: 0;
+  color: #666666;
   margin: 3px;
-  background-color: #818cf8;
+  background-color: rgba(255, 255, 255, 60%);
 }
 
 .fc .fc-daygrid-day.fc-day-today {
   border-radius: 10px;
-  background-color: #ea6981;
+  background-color: rgb(136, 77, 255);
 }
 
-.fc .fc-scrollgrid, 
-.fc .fc-col-header-cell, 
-.fc .fc-daygrid-day, 
+.fc .fc-scrollgrid,
+.fc .fc-col-header-cell,
+.fc .fc-daygrid-day,
 .fc .fc-toolbar,
 .fc {
-  border: 0; /* Remove all borders */
+  border: 0;
+  /* Remove all borders */
 }
 
 .fc td[role="presentation"] {
-  border: none; /* Remove any borders */
+  border: none;
+  /* Remove any borders */
 }
 
 .glow-overlay {
