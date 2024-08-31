@@ -15,7 +15,7 @@ const Profile = () => {
           <h2 className='text-lg text-gray-300 font-bold mb-2'>Profile</h2>
           <div className='flex justify-between'>
             <h2 className='text-3xl font-bold mb-2'>Google Developer</h2>
-            <button className='bg-primary hover:bg-purple-500 text-white font-bold py-1 px-4 rounded-3xl mt-4 '>Edit Profile</button>
+            <button className='bg-primary hover:bg-purple-500 text-white font-bold py-1 px-4 rounded-3xl mt-4 '>Edit</button>
           </div>
           <h2 className='text-xl font-bold mb-2'>Auckland, New Zealand</h2>
           <p className='text-gray-800'>Email: googledeveloper@gmail.com</p>
