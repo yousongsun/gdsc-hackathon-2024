@@ -56,7 +56,7 @@ const AllPrescriptions = () => {
             </Link>
           </div>
         </div>
-
+        <PrescriptionBanner name={"Paracetamol"} dose={"500mg"} />
         {prspBanners}
       </div>
     </div>

@@ -9,7 +9,7 @@
   /* Include padding and border in the element's total width and height */
 }
 
->>>>>>>28868b81d1783cc07ac9aaa54224192fa6bfa409 .fc .fc-col-header-cell-cushion {
+.fc .fc-col-header-cell-cushion {
   color: black;
   /* Change weekday names to black */
 }
@@ -27,9 +27,7 @@
 
 .fc .fc-daygrid-day.fc-day-today {
   border-radius: 10px;
-  <<<<<<< HEAD background-color: rgb(136, 77, 255);
-  =======background-color: #ea6981;
-  >>>>>>>28868b81d1783cc07ac9aaa54224192fa6bfa409
+  background-color: rgb(136, 77, 255);
 }
 
 .fc .fc-scrollgrid,
