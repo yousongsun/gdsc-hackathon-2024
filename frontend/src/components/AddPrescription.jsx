@@ -44,17 +44,17 @@ const AddPrescription = () => {
       <div className="container p-4 mx-auto">
         <div className="flex items-center">
           <Link to="/">
-            <img className="w-16 h-16" src={Icon} alt="Icon" />
+            <img className="w-16 h-16 mr-2" src={Icon} alt="Icon" />
           </Link>
           <div className="text-3xl text-white font-bold">New Prescription</div>
         </div>
 
         <div className="bg-white/80 rounded-3xl shadow-lg p-6 mt-4">
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="text-2xl font-bold mb-2 ml-1">
             Create a new prescription
           </h2>
           <div className="flex justify-between">
-            <input className="rounded-3xl p-2"
+            <input className="rounded-3xl p-2 pr-10"
               placeholder=" Enter Prescription Name"
               type="text"
               value={prescriptionName}
@@ -70,14 +70,14 @@ const AddPrescription = () => {
         </div>
 
         <div className="bg-white/80 rounded-3xl shadow-lg p-6 mt-4">
-          <h2 className="text-lg text-[#c0c0c0] font-bold mb-2">
+          <h2 className="text-xl text-[#c0c0c0] font-bold mb-2">
             Prescription details
           </h2>
 
           <div className="flex flex-col">
             <div>
-              <h2 className="text-xl font-bold mb-2">Medication name</h2>
-              <input className="rounded-3xl p-2"
+              <h2 className="text-2xl font-bold mb-2">Medication name</h2>
+              <input className="rounded-3xl p-2 pr-10"
                 placeholder=" Enter medication name"
                 type="text"
                 value={medicationName}
@@ -88,10 +88,10 @@ const AddPrescription = () => {
             <hr className="my-4" />
 
             <div>
-              <h2 className="text-xl font-bold mb-2">
+              <h2 className="text-2xl font-bold mb-2">
                 Medication details (dosage / form / quantity)
               </h2>
-              <input className="rounded-3xl p-2"
+              <input className="rounded-3xl p-2 pr-10"
                 placeholder="Enter medication details"
                 type="text"
                 value={medicationDetails}
@@ -102,10 +102,10 @@ const AddPrescription = () => {
             <hr className="my-4" />
 
             <div>
-              <h2 className="text-xl font-bold mb-2">
+              <h2 className="text-2xl font-bold mb-2 ">
                 Administration instructions
               </h2>
-              <input className="rounded-3xl p-2"
+              <input className="rounded-3xl p-2 pr-10"
                 placeholder=" Enter administration instructions"
                 type="text"
                 value={administrationInstructions}
@@ -116,9 +116,9 @@ const AddPrescription = () => {
             <hr className="my-4" />
 
             <div>
-              <h2 className="text-xl font-bold mb-2">Additional details</h2>
-              <input className="rounded-3xl p-2"
-                placeholder="additional details"
+              <h2 className="text-2xl font-bold mb-2">Additional details</h2>
+              <input className="rounded-3xl p-2 pr-10"
+                placeholder="Additional details"
                 type="text"
                 value={additionalDetails}
                 onChange={(e) => setAdditionalDetails(e.target.value)}
@@ -128,9 +128,9 @@ const AddPrescription = () => {
             <hr className="my-4" />
 
             <div>
-              <h2 className="text-xl font-bold mb-2">Last Taken Time</h2>
-              <input className="rounded-3xl p-2"
-                placeholder="Last Taken Time"
+              <h2 className="text-2xl font-bold mb-2">Last Taken Time</h2>
+              <input className="rounded-3xl p-2 pr-10"
+                placeholder="Last time taken"
                 type="text"
                 value={lastTakenTime}
                 onChange={(e) => setLastTakenTime(e.target.value)}
