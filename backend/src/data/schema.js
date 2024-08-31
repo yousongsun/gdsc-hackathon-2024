@@ -5,10 +5,8 @@ const Schema = mongoose.Schema;
 const patientSchema = new Schema(
     {
         name: { type: String, required: true },
-        date: Date,
-    },
-    {
-        timestamps: {},
+        prescriptions: { type: Array, required: true }
+
     }
 );
 
