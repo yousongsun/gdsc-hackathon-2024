@@ -8,17 +8,18 @@ const Prescription = () => {
   
   useEffect(() => {
     const getPrescriptionData = async () => {
-      const response = await fetch(`/api/prescriptions/${id}`, {
+      const response = await fetch(`/api/prescriptions/${name}`, {
         method: 'GET'
       })
 
       const prescriptionData = await response.json()
+      console.log(prescriptionData)
       setPrescription(prescriptionData)
     }
 
     getPrescriptionData()
 
-  })
+  }, [])
 
   return (
     <div className='bg-white/80 rounded-3xl shadow-lg p-6 mt-4'>

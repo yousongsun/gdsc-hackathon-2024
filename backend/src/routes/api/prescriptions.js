@@ -2,8 +2,9 @@ import express from "express";
 import { Prescription } from "../../data/prescriptionSchema.js";
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/:name", async (req, res) => {
   try {
+
     const prsps = await Prescription.find();
     res.status(200).json(prsps);
   } catch (error) {
