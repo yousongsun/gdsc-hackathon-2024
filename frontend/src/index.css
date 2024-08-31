@@ -23,6 +23,11 @@
   background: plum;
 }
 
+.fc {
+  width: 100% !important; /* Ensure the calendar spans the full width of its container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
 .fc .fc-col-header-cell-cushion {
   color: black;
   /* Change weekday names to black */

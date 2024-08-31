@@ -13,7 +13,7 @@ const Calendar = () => {
           <img className='w-16 h-16' src={Icon} alt="Icon" />
           <h1 className='text-3xl'>Calendar</h1>
         </div>
-        <div className='pt-10 text-xl text-white font-bold border-none'>
+        <div className='pt-10 text-xl max-w-max text-white font-bold border-none'>
           <FullCalendar
             headerToolbar={{
               left: 'prev,next today',
@@ -21,7 +21,6 @@ const Calendar = () => {
               right: 'dayGridMonth,dayGridWeek,dayGridDay'
             }}
             height='auto'
-            width='auto'
             plugins={[ dayGridPlugin ]}
             initialView="dayGridMonth"
             color='black'

@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Prescription from "./Prescription";
 import PrescriptionBanner from "./PrescriptionBanner";
 import Icon from "../assets/icon.jpg";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
+import { PRECRIPTION_URL } from "../api/urls";
 const AllPrescriptions = () => {
+  const [allPrsps, setAllPrsps] = useState([]);
+  const getAllPrsps = async () => {
+    await axios.get(PRECRIPTION_URL).then((res) => {
+      setAllPrsps(res.data);
+    });
+  };
+  useEffect(() => {
+    getAllPrsps();
+  }, []);
+
+  const prspBanners = allPrsps.map((p, index) => (
+    <PrescriptionBanner
+      key={index}
+      name={p.medicationName}
+      dose={p.medicationDetails}
+      details={p.additionalDetails}
+    />
+  ));
+
   return (
     <div className="container p-4 mx-auto">
       <div className="flex items-center">
@@ -37,14 +57,7 @@ const AllPrescriptions = () => {
           </div>
         </div>
 
-        <PrescriptionBanner name={"Paracetamol"} dose={"500mg"} />
-        <PrescriptionBanner name={"Ibuprofen"} dose={"200mg"} />
-        <PrescriptionBanner name={"Aspirin"} dose={"100mg"} />
-        <PrescriptionBanner name={"Amoxicillin"} dose={"500mg"} />
-        <PrescriptionBanner name={"Azithromycin"} dose={"500mg"} />
-        <PrescriptionBanner name={"Ciprofloxacin"} dose={"500mg"} />
-        <PrescriptionBanner name={"Doxycycline"} dose={"100mg"} />
-        <PrescriptionBanner name={"Metronidazole"} dose={"500mg"} />
+        {prspBanners}
       </div>
     </div>
   );
