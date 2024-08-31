@@ -13,7 +13,7 @@ const PORT = process.env.PORT ?? 3000;
 
 // Creates the express server
 const app = express();
-
+app.use(cors());
 /**
  * Configure middleware (logging, CORS support, JSON parsing support,
  * static files support, cookie parser)
@@ -24,10 +24,10 @@ const app = express();
 app.use(morgan("combined"));
 app.use(cookieParser());
 app.use(
-    cors({
-        origin: [`http://localhost:${PORT}`, process.env.FRONTEND_ORIGIN],
-        credentials: true
-    })
+  cors({
+    origin: [`http://localhost:${PORT}`, process.env.FRONTEND_ORIGIN],
+    credentials: true
+  })
 );
 app.use(express.json({ limit: "10mb" }));
 app.use(express.static("public"));
@@ -41,10 +41,8 @@ app.use("/", routes);
 // await getDatabase();
 
 // Start the server running.
-mongoose
-    .connect(process.env.DB_URL)
-    .then(() =>
-        app.listen(PORT, () => {
-            console.log(`PGCIT Final Project server listening on port ${PORT}`);
-        })
-    );
+mongoose.connect(process.env.DB_URL).then(() =>
+  app.listen(PORT, () => {
+    console.log(`PGCIT Final Project server listening on port ${PORT}`);
+  })
+);

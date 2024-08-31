@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.fc .fc-col-header-cell-cushion {
+.fc {
+  width: 100% !important;
+  /* Ensure the calendar spans the full width of its container */
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width and height */
+}
+
+>>>>>>>28868b81d1783cc07ac9aaa54224192fa6bfa409 .fc .fc-col-header-cell-cushion {
   color: black;
   /* Change weekday names to black */
 }
@@ -20,7 +27,9 @@
 
 .fc .fc-daygrid-day.fc-day-today {
   border-radius: 10px;
-  background-color: rgb(136, 77, 255);
+  <<<<<<< HEAD background-color: rgb(136, 77, 255);
+  =======background-color: #ea6981;
+  >>>>>>>28868b81d1783cc07ac9aaa54224192fa6bfa409
 }
 
 .fc .fc-scrollgrid,

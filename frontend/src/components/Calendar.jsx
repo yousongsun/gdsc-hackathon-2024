@@ -15,7 +15,7 @@ const Calendar = () => {
           <Link to="/"><img className='w-16 h-16' src={Icon} alt="Icon" /></Link>
           <h1 className='text-3xl'>Calendar</h1>
         </div>
-        <div className='pt-10 text-xl text-white font-bold border-none'>
+        <div className='pt-10 text-xl max-w-max text-white font-bold border-none'>
           <FullCalendar
             headerToolbar={{
               left: 'prev,next today',
