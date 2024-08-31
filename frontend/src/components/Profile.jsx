@@ -14,13 +14,13 @@ const Profile = () => {
         <div className='bg-white/60 rounded-3xl shadow-lg p-6 mt-4'>
           <h2 className='text-lg text-[#666666] font-bold mb-2'>Profile</h2>
           <div className='flex justify-between'>
-            <h2 className='text-3xl font-bold mb-2'>Google Developer</h2>
+            <h2 className='text-3xl font-bold mb-2'>Jane Doe</h2>
             <button className='bg-indigo-400 hover:bg-indigo-400 text-white font-bold py-1 px-4 rounded-3xl mt-4 '>Edit</button>
           </div>
           <h2 className='text-xl font-bold mb-2'>Auckland, New Zealand</h2>
-          <p className='text-gray-800'>Email: googledeveloper@gmail.com</p>
-          <p className='text-gray-800'>Gender: Prefer not to say</p>
-          <p className='text-gray-800'>Date of Birth: 31/8/2024</p>
+          <p className='text-gray-800'>Email: janedoe23456@gmail.com</p>
+          <p className='text-gray-800'>Gender: Female</p>
+          <p className='text-gray-800'>Date of Birth: 31/8/1987</p>
         </div>
 
         <div className='bg-white/60 rounded-3xl shadow-lg p-6 mt-4'>
