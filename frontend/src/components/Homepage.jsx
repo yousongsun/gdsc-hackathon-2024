@@ -18,8 +18,8 @@ const prsps = [
     prspName: "ddddd",
     weight: 50,
     capsules: 2,
-    taken: 22,
-    total: 55,
+    taken: 10,
+    total: 100,
     details: "ha",
   },
 ];
