@@ -28,6 +28,31 @@
   /* Change weekday names to black */
 }
 
+.fc .fc-daygrid-day-frame {
+  border-radius: 10px; /* Adjust the radius as needed */
+  overflow: hidden; /* Ensure the content stays within the rounded corners */
+  border: 1px solid #818cf8;
+  margin: 3px;
+  background-color: #818cf8;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  border-radius: 10px;
+  background-color: purple;
+}
+
+.fc .fc-scrollgrid, 
+.fc .fc-col-header-cell, 
+.fc .fc-daygrid-day, 
+.fc .fc-toolbar,
+.fc {
+  border: 0; /* Remove all borders */
+}
+
+.fc td[role="presentation"] {
+  border: none; /* Remove any borders */
+}
+
 .glow-overlay {
   --glow-size: 25rem;
   position: absolute;
