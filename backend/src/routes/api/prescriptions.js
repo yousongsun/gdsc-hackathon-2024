@@ -18,6 +18,16 @@ router.post("/", async (req, res) => {
   res.status(201).json(p);
 });
 
+router.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  const updatedPrsp = req.body;
+  const p = await Prescription.findOneAndUpdate({ _id: id }, updatedPrsp);
+
+  if (!p) return res.sendStatus(404);
+
+  res.status(204).json({ message: "update success" });
+});
+
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   await Prescription.deleteOne({ _id: id });
