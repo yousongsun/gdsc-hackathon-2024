@@ -10,12 +10,12 @@ const Prescription = () => {
   const [dosesTotal, setDosesTotal] = useState(24)
   const [prescription, setPrescription] = useState({
     prescriptionName: 'Prescription 1',
-    medicationName: 'Paracetamol',
-    medicationDetails: '40mg',
-    administrationInstructions: '2 capsules per dose',
-    additionalDetails: 'take after lunch'
+    medicationName: 'Metformin',
+    medicationDetails: '500mg',
+    administrationInstructions: '4 tablets per dose',
+    additionalDetails: 'Administer with meals.'
   })
-  
+
   useEffect(() => {
     const getPrescriptionData = async () => {
       const response = await fetch(`/api/prescriptions/${name}`, {
