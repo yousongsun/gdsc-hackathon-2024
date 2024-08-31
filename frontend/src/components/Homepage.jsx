@@ -1,7 +1,35 @@
 import React from "react";
 import CatIcon from "../assets/icon.jpg";
+import HomePrspItem from "./HomePrspItem";
+const prsps = [
+  {
+    hours: 3,
+    minutes: 25,
+    prspName: "abc",
+    weight: 50,
+    capsules: 2,
+    taken: 22,
+    total: 55,
+    details: "ha",
+  },
+  {
+    hours: 3,
+    minutes: 25,
+    prspName: "ddddd",
+    weight: 50,
+    capsules: 2,
+    taken: 22,
+    total: 55,
+    details: "ha",
+  },
+];
 
 const Homepage = () => {
+  const prescriptions = prsps.map((p, index) => (
+    <div key={index} className="bg-white my-4 p-6 rounded-3xl h-64">
+      <HomePrspItem prspInfo={p} />
+    </div>
+  ));
   return (
     <div className="container p-4 mx-auto">
       <div className="flex items-center">
@@ -11,26 +39,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="bg-white my-4 p-6 rounded-3xl h-64">
-        <div className="text-gray-400 text-xl">In 3 hours, 40 minutes</div>
-        <div className="text-4xl">Prescription Name</div>
-        <div>40mg, 2 capsules</div>
-        <div className="p-2 w-full bg-gray-400 rounded-2xl">
-          <div className="w-1/2 h-1 bg-purple-600 rounded-2xl"></div>
-        </div>
-        <div className="text-gray-400 text-xl">26/55 taken</div>
-        <div>details</div>
-      </div>
-      <div className="bg-white my-4 p-6 rounded-3xl h-64">
-        <div className="text-gray-400 text-xl">In 3 hours, 40 minutes</div>
-        <div className="text-4xl">Prescription Name</div>
-        <div>40mg, 2 capsules</div>
-        <div className="p-2 w-full bg-gray-400 rounded-2xl">
-          <div className="w-1/4 h-1 bg-purple-600 rounded-2xl"></div>
-        </div>
-        <div className="text-gray-400 text-xl">26/55 taken</div>
-        <div>details</div>
-      </div>
+      {prescriptions}
     </div>
   );
 };
