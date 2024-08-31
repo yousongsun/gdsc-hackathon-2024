@@ -223,7 +223,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
               Navigator.pushNamed(context, '/');
             },
             child: Text(
-              'You should take the nintedanib now!',
+              'You should take the Metformin now!',
               style: TextStyle(color: Colors.white, fontSize: 16.0),
             ),
           ),
