@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import Icon from "../assets/icon.jpg";
 import { Link } from "react-router-dom";
 import Confetti from 'react-confetti'
+import medImage from '../assets/metformin.jpg'; // Adjust the path as needed
+
 
 const Prescription = () => {
 
@@ -68,14 +70,24 @@ const Prescription = () => {
           ></div>
         </div>
         <h2 className="text-lg text-[#c0c0c0] font-bold mb-2">{dosesTaken}/{dosesTotal} Doses taken</h2>
-        <p className="text-gray-800 leading-8 mt-5">
-          <strong>Administer instruction:</strong> administer with meals to reduce gastrointestinal side effects.
-          Do not crush, chew, or break extended-release tablets. Take the medication at the same time each day to maintain even levels of the drug in your bloodstream.
-          If a dose is missed, take it as soon as remembered unless it is almost time for the next dose. Do not double up on doses to make up for a missed one. <br></br>
-          <strong>Common side effects:</strong> gastrointestinal issues such as nausea, vomiting, diarrhea, abdominal discomfort, and loss of appetite. These often diminish as the body adjusts to the medication. <br></br>
-          <strong>Additional details:</strong> Metformin can interact with various medications such as diuretics, corticosteroids, and blood pressure medications. It's important to inform healthcare providers of all medications and supplements being taken.
-          Regular monitoring of blood glucose levels is essential to assess the effectiveness of Metformin and make any necessary adjustments to dosage.
-        </p>
+        <div className='flex'>
+          <div className="text-gray-800 leading-8 mt-5 text-xl">
+            <h1 className='font-bold text-3xl'>Administration Instructions</h1>
+            Administer with meals to reduce gastrointestinal side effects.
+            Do not crush, chew, or break extended-release tablets. Take the medication at the same time each day to maintain even levels of the drug in your bloodstream.
+            If a dose is missed, take it as soon as remembered unless it is almost time for the next dose. Do not double up on doses to make up for a missed one.
+            <br></br>
+            <br></br>
+            <h1 className='font-bold text-3xl'>Common Side Effects</h1>
+            Gastrointestinal issues such as nausea, vomiting, diarrhea, abdominal discomfort, and loss of appetite. These often diminish as the body adjusts to the medication.
+            <br></br>
+            <br></br>
+            <h1 className='font-bold text-3xl'>Additional Details</h1>
+            Metformin can interact with various medications such as diuretics, corticosteroids, and blood pressure medications. It's important to inform healthcare providers of all medications and supplements being taken.
+            Regular monitoring of blood glucose levels is essential to assess the effectiveness of Metformin and make any necessary adjustments to dosage.
+          </div>
+          <img src={medImage} className='w-1/3 h-1/4 border-indigo-400 border-[10px] border-solid rounded-xl ml-4'></img>
+        </div>
       </div>
     </div>
 
