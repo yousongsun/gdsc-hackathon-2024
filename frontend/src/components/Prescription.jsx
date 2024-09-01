@@ -34,8 +34,8 @@ const Prescription = () => {
   }, [])
 
   return (
-    <div className="p-4 mx-auto">
-      {dosesTaken === dosesTotal && <Confetti />}
+    <div className="p-4 mx-auto px-6">
+      {dosesTaken === dosesTotal && <Confetti width={1800}/>}
       <div className="flex items-center">
         <Link to="/">
           <img className="w-16 h-16 mr-2" src={Icon} alt="Icon" />
@@ -47,7 +47,7 @@ const Prescription = () => {
         <div className="flex justify-between">
           <h2 className="text-5xl font-bold mb-2">{prescription?.medicationName}</h2>
           <div className='w-52 flex justify-between'>
-            <button className='bg-[#808080] text-white font-bold w-10 rounded-full mt-4 text-2xl' onClick={() => { if (dosesTaken < dosesTotal) { setDosesTaken(dosesTaken + 1) } }}>
+            <button className='bg-[#808080] text-white font-bold w-10 rounded-full mt-4 text-2xl p-0' onClick={() => { if (dosesTaken < dosesTotal) { setDosesTaken(dosesTaken + 1) } }}>
               +
             </button>
             <button className='bg-[#808080] text-white font-bold w-10 rounded-full mt-4 text-2xl' onClick={() => { if (dosesTaken <= dosesTotal && dosesTaken > 0) { setDosesTaken(dosesTaken - 1) } }}>
