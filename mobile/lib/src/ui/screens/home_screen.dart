@@ -130,15 +130,18 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
+
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/prescriptions');
+              },
+              child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.8), // bg-white/80
                   borderRadius: BorderRadius.circular(24.0), // rounded-3xl
                 ),
-                margin: EdgeInsets.symmetric(vertical: 16.0),
-                // my-4
-                padding: EdgeInsets.all(24.0),
-                // p-6
+                margin: EdgeInsets.symmetric(vertical: 16.0), // my-4
+                padding: EdgeInsets.all(24.0), // p-6
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -171,8 +174,7 @@ class HomeScreen extends StatelessWidget {
                       width: double.infinity, // w-full
                       decoration: BoxDecoration(
                         color: Colors.grey[400], // bg-gray-400
-                        borderRadius:
-                            BorderRadius.circular(16.0), // rounded-2xl
+                        borderRadius: BorderRadius.circular(16.0), // rounded-2xl
                       ),
                       child: Stack(
                         children: [
@@ -180,11 +182,9 @@ class HomeScreen extends StatelessWidget {
                             height: 4.0, // h-1
                             decoration: BoxDecoration(
                               color: Colors.purple[600], // bg-purple-600
-                              borderRadius:
-                                  BorderRadius.circular(16.0), // rounded-2xl
+                              borderRadius: BorderRadius.circular(16.0), // rounded-2xl
                             ),
-                            width: MediaQuery.of(context).size.width *
-                                22/55, // width: 40%
+                            width: MediaQuery.of(context).size.width * 22 / 55, // width: 40%
                           ),
                         ],
                       ),
@@ -198,17 +198,12 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 8.0),
-                    // Text(
-                    //   'text',
-                    //   style: TextStyle(
-                    //     fontSize: 16.0,
-                    //     color: Colors.black,
-                    //   ),
-                    // ),
                   ],
                 ),
               ),
-              Container(
+            ),
+
+            Container(
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.8), // bg-white/80
                   borderRadius: BorderRadius.circular(24.0), // rounded-3xl
@@ -522,15 +517,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SecondScreen()),
-                  );
-                },
-                child: const Text('My prescriptions'),
-              ),
+
               SizedBox(height: 20.0),
             ])),
       ),
