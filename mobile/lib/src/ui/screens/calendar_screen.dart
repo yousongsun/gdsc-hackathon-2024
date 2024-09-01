@@ -16,10 +16,21 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Timer? _notificationTimer;
   bool _showNotification = false;
 
+  late final ValueNotifier<List<Event>> _selectedEvents;
+  RangeSelectionMode _rangeSelectionMode = RangeSelectionMode
+      .toggledOff; // Can be toggled on/off by longpressing a date
+  DateTime? _rangeStart;
+  DateTime? _rangeEnd;
+
+
   @override
   void initState() {
     super.initState();
     _startNotificationTimer();
+
+    _selectedDay = _focusedDay;
+    _selectedEvents = ValueNotifier(_getEventsForDay(_selectedDay!));
+
   }
 
   @override
@@ -45,6 +56,53 @@ class _CalendarScreenState extends State<CalendarScreen> {
         _showNotification = false;
       });
     });
+  }
+
+  List<Event> _getEventsForDay(DateTime day) {
+    // Implementation example
+    return kEvents[day] ?? [];
+  }
+
+  List<Event> _getEventsForRange(DateTime start, DateTime end) {
+    // Implementation example
+    final days = daysInRange(start, end);
+
+    return [
+      for (final d in days) ..._getEventsForDay(d),
+    ];
+  }
+
+  void _onDaySelected(DateTime selectedDay, DateTime focusedDay) {
+    if (!isSameDay(_selectedDay, selectedDay)) {
+      setState(() {
+        _selectedDay = selectedDay;
+        _focusedDay = focusedDay;
+        _rangeStart = null; // Important to clean those
+        _rangeEnd = null;
+        _rangeSelectionMode = RangeSelectionMode.toggledOff;
+      });
+
+      _selectedEvents.value = _getEventsForDay(selectedDay);
+    }
+  }
+
+  void _onRangeSelected(DateTime? start, DateTime? end, DateTime focusedDay) {
+    setState(() {
+      _selectedDay = null;
+      _focusedDay = focusedDay;
+      _rangeStart = start;
+      _rangeEnd = end;
+      _rangeSelectionMode = RangeSelectionMode.toggledOn;
+    });
+
+    // `start` or `end` could be null
+    if (start != null && end != null) {
+      _selectedEvents.value = _getEventsForRange(start, end);
+    } else if (start != null) {
+      _selectedEvents.value = _getEventsForDay(start);
+    } else if (end != null) {
+      _selectedEvents.value = _getEventsForDay(end);
+    }
   }
 
   @override
@@ -114,22 +172,25 @@ class _CalendarScreenState extends State<CalendarScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            TableCalendar(
+
+
+                            TableCalendar<Event>(
                               firstDay: kFirstDay,
                               lastDay: kLastDay,
                               focusedDay: _focusedDay,
+                              selectedDayPredicate: (day) => isSameDay(_selectedDay, day),
+                              rangeStartDay: _rangeStart,
+                              rangeEndDay: _rangeEnd,
                               calendarFormat: _calendarFormat,
-                              selectedDayPredicate: (day) {
-                                return isSameDay(_selectedDay, day);
-                              },
-                              onDaySelected: (selectedDay, focusedDay) {
-                                if (!isSameDay(_selectedDay, selectedDay)) {
-                                  setState(() {
-                                    _selectedDay = selectedDay;
-                                    _focusedDay = focusedDay;
-                                  });
-                                }
-                              },
+                              rangeSelectionMode: _rangeSelectionMode,
+                              eventLoader: _getEventsForDay,
+                              startingDayOfWeek: StartingDayOfWeek.monday,
+                              calendarStyle: CalendarStyle(
+                                // Use `CalendarStyle` to customize the UI
+                                outsideDaysVisible: false,
+                              ),
+                              onDaySelected: _onDaySelected,
+                              onRangeSelected: _onRangeSelected,
                               onFormatChanged: (format) {
                                 if (_calendarFormat != format) {
                                   setState(() {
@@ -141,12 +202,30 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                 _focusedDay = focusedDay;
                               },
                             ),
+
+
                           ],
                         ),
+
+
+
+
                       ),
                       SizedBox(height: 20.0),
+
+
+
+
+
+
+
+
+
                     ])),
           ),
+
+
+
           AnimatedPositioned(
             duration: Duration(milliseconds: 500),
             top: _showNotification ? 0 : -100, // Slide in and out of view
@@ -154,6 +233,40 @@ class _CalendarScreenState extends State<CalendarScreen> {
             right: 0,
             child: _buildNotification(),
           ),
+
+
+
+          ValueListenableBuilder<List<Event>>(
+            valueListenable: _selectedEvents,
+            builder: (context, value, _) {
+              return Padding(
+                padding: const EdgeInsets.only(top: 520.0),  // Add top padding here
+                child: ListView.builder(
+                  itemCount: value.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: const EdgeInsets.symmetric(
+                        horizontal: 12.0,
+                        vertical: 4.0,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      child: ListTile(
+                        onTap: () => print('${value[index]}'),
+                        title: Text('${value[index]}'),
+                      ),
+                    );
+                  },
+                ),
+              );
+            },
+          ),
+
+
+
+
         ],
       ),
       floatingActionButton: SpeedDial(
