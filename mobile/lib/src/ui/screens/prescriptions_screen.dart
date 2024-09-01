@@ -83,7 +83,7 @@ class PrescriptionsScreen extends StatelessWidget {
                             Text(
                               'Every 4 hours',
                               style: TextStyle(
-                                fontSize: 28,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xFF666666),
                               ),
@@ -95,7 +95,7 @@ class PrescriptionsScreen extends StatelessWidget {
                                 Text(
                                   'Metformin',
                                   style: TextStyle(
-                                    fontSize: 40,
+                                    fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
