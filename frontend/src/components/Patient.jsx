@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Patient(props) {
   const { patientInfo } = props;
   return (
-    <Link to={`/patients/${patientInfo.name}`}>
+    <Link to={`/patients/details`}>
       <div className="bg-white/60 hover:bg-white/90 duration-200 rounded-3xl shadow-lg p-6 mt-4">
         <h2 className="text-lg text-[#666666] font-bold mb-2">
           Last Seen {patientInfo.lastSeen}
