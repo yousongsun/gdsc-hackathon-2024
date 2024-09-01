@@ -29,21 +29,18 @@ const Profile = () => {
           <div className='flex flex-col'>
             <div>
               <h2 className='text-xl font-bold mb-2'>Change Password</h2>
-              <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text</p>
             </div>
 
             <hr className='my-4' />
 
             <div>
               <h2 className='text-xl font-bold mb-2'>Notifications</h2>
-              <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text</p>
             </div>
 
             <hr className='my-4' />
 
             <div>
               <h2 className='text-xl font-bold mb-2'>Additional Settings</h2>
-              <p className='text-gray-800'>Placeholder text Placeholder text Placeholder text Placeholder text</p>
             </div>
 
           </div>
