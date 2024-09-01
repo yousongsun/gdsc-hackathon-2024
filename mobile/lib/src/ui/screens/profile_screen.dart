@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -212,6 +213,29 @@ class ProfileScreen extends StatelessWidget {
               ),
               SizedBox(height: 20.0),
             ])),
+      ),
+      floatingActionButton: SpeedDial(
+        icon: Icons.add,
+        activeIcon: Icons.close,
+        backgroundColor: Colors.blue,
+        overlayColor: Colors.black,
+        overlayOpacity: 0.2,
+        children: [
+          SpeedDialChild(
+            child: Icon(Icons.calendar_month),
+            label: 'Calendar',
+            onTap: () {
+              Navigator.pushNamed(context, '/calendar');
+            },
+          ),
+          SpeedDialChild(
+            child: Icon(Icons.photo_camera),
+            label: 'Scan',
+            onTap: () {
+              Navigator.pushNamed(context, '/camera');
+            },
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [

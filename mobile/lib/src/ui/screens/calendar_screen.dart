@@ -164,17 +164,17 @@ class _CalendarScreenState extends State<CalendarScreen> {
         overlayOpacity: 0.5,
         children: [
           SpeedDialChild(
-            child: Icon(Icons.event),
-            label: 'Add Event',
+            child: Icon(Icons.calendar_month),
+            label: 'Calendar',
             onTap: () {
-              // Handle event addition logic
+              Navigator.pushNamed(context, '/calendar');
             },
           ),
           SpeedDialChild(
-            child: Icon(Icons.note_add),
-            label: 'Add Note',
+            child: Icon(Icons.photo_camera),
+            label: 'Scan',
             onTap: () {
-              // Handle note addition logic
+              Navigator.pushNamed(context, '/camera');
             },
           ),
         ],
@@ -220,7 +220,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           GestureDetector(
             onTap: () {
               // Navigate to another page
-              Navigator.pushNamed(context, '/');
+              Navigator.pushNamed(context, '/prescriptions');
             },
             child: Text(
               'You should take the Metformin now!',

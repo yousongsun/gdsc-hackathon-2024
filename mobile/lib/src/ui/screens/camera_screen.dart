@@ -103,7 +103,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       padding: const EdgeInsets.only(bottom: 20), // Add padding from the bottom if needed
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/');
+                          Navigator.pushNamed(context, '/prescriptions');
                         },
                         child: Text('Capture'), // Example button
                       ),
