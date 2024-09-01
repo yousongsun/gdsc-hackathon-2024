@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                       GestureDetector(
                         onTap: () {
                           // Handle your navigation logic here
-                          Navigator.pushNamed(context, '/');
+                          Navigator.pushNamed(context, '/home');
                         },
                         child: Image.asset(
                           'assets/images/icon.jpg',
@@ -79,10 +79,7 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(height: 24.0),
                   ElevatedButton(
                     onPressed: () {
-                      // Perform login action
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Logging in...')),
-                      );
+                      Navigator.pushNamed(context, "/home");
                     },
                     style: ElevatedButton.styleFrom(
                       // primary: Color(0xFF7751b5), // Button color
@@ -109,7 +106,7 @@ class LoginScreen extends StatelessWidget {
         ],
         onTap: (int index) {
           if (index == 0) {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/home');
           } else if (index == 1) {
             Navigator.pushNamed(context, '/calendar');
           } else if (index == 2) {
