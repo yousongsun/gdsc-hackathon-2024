@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'In 3 hours, 25 minutes',
+                      'In 2 hours, 25 minutes',
                       style: TextStyle(
                         color: Colors.grey[400], // text-gray-400
                         fontSize: 20.0, // text-xl
@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8.0), // spacing between elements
                     Text(
-                      'abc',
+                      'Amoxicillin',
                       style: TextStyle(
                         fontSize: 32.0, // text-4xl
                         color: Colors.black,
@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8.0),
                     Text(
-                      '50mg, 2 capsules',
+                      '400mg, 2 tablets',
                       style: TextStyle(
                         fontSize: 16.0,
                         color: Colors.black,
@@ -106,27 +106,27 @@ class HomeScreen extends StatelessWidget {
                                   BorderRadius.circular(16.0), // rounded-2xl
                             ),
                             width: MediaQuery.of(context).size.width *
-                                0.4, // width: 40%
+                                4/14, // width: 40%
                           ),
                         ],
                       ),
                     ),
                     SizedBox(height: 8.0),
                     Text(
-                      '22/55 taken',
+                      '4/14 taken',
                       style: TextStyle(
                         color: Colors.grey[400], // text-gray-400
                         fontSize: 20.0, // text-xl
                       ),
                     ),
                     SizedBox(height: 8.0),
-                    Text(
-                      'ha',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        color: Colors.black,
-                      ),
-                    ),
+                    // Text(
+                    //   'text',
+                    //   style: TextStyle(
+                    //     fontSize: 16.0,
+                    //     color: Colors.black,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -143,7 +143,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'In 3 hours, 25 minutes',
+                      'In 2 hours, 25 minutes',
                       style: TextStyle(
                         color: Colors.grey[400], // text-gray-400
                         fontSize: 20.0, // text-xl
@@ -151,7 +151,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8.0), // spacing between elements
                     Text(
-                      'abc',
+                      'Metformin',
                       style: TextStyle(
                         fontSize: 32.0, // text-4xl
                         color: Colors.black,
@@ -159,7 +159,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8.0),
                     Text(
-                      '50mg, 2 capsules',
+                      '500mg, 4 tablets',
                       style: TextStyle(
                         fontSize: 16.0,
                         color: Colors.black,
@@ -184,7 +184,7 @@ class HomeScreen extends StatelessWidget {
                                   BorderRadius.circular(16.0), // rounded-2xl
                             ),
                             width: MediaQuery.of(context).size.width *
-                                0.4, // width: 40%
+                                22/55, // width: 40%
                           ),
                         ],
                       ),
@@ -198,13 +198,13 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 8.0),
-                    Text(
-                      'ha',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        color: Colors.black,
-                      ),
-                    ),
+                    // Text(
+                    //   'text',
+                    //   style: TextStyle(
+                    //     fontSize: 16.0,
+                    //     color: Colors.black,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -221,7 +221,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'In 3 hours, 25 minutes',
+                      'In 3 hours, 5 minutes',
                       style: TextStyle(
                         color: Colors.grey[400], // text-gray-400
                         fontSize: 20.0, // text-xl
@@ -229,7 +229,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8.0), // spacing between elements
                     Text(
-                      'abc',
+                      'Nivolumab',
                       style: TextStyle(
                         fontSize: 32.0, // text-4xl
                         color: Colors.black,
@@ -237,7 +237,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8.0),
                     Text(
-                      '50mg, 2 capsules',
+                      '100mg, 10ml',
                       style: TextStyle(
                         fontSize: 16.0,
                         color: Colors.black,
@@ -262,30 +262,266 @@ class HomeScreen extends StatelessWidget {
                                   BorderRadius.circular(16.0), // rounded-2xl
                             ),
                             width: MediaQuery.of(context).size.width *
-                                0.4, // width: 40%
+                                4/12, // width: 40%
                           ),
                         ],
                       ),
                     ),
                     SizedBox(height: 8.0),
                     Text(
-                      '22/55 taken',
+                      '4/12 taken',
                       style: TextStyle(
                         color: Colors.grey[400], // text-gray-400
                         fontSize: 20.0, // text-xl
                       ),
                     ),
                     SizedBox(height: 8.0),
-                    Text(
-                      'ha',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        color: Colors.black,
-                      ),
-                    ),
+                    // Text(
+                    //   'text',
+                    //   style: TextStyle(
+                    //     fontSize: 16.0,
+                    //     color: Colors.black,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
+
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.8), // bg-white/80
+                      borderRadius: BorderRadius.circular(24.0), // rounded-3xl
+                    ),
+                    margin: EdgeInsets.symmetric(vertical: 16.0),
+                    // my-4
+                    padding: EdgeInsets.all(24.0),
+                    // p-6
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'In 9 hours, 25 minutes',
+                          style: TextStyle(
+                            color: Colors.grey[400], // text-gray-400
+                            fontSize: 20.0, // text-xl
+                          ),
+                        ),
+                        SizedBox(height: 8.0), // spacing between elements
+                        Text(
+                          'Pembrolizumab',
+                          style: TextStyle(
+                            fontSize: 32.0, // text-4xl
+                            color: Colors.black,
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          '25mg, 4 ml',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                        SizedBox(height: 16.0),
+                        Container(
+                          padding: EdgeInsets.all(8.0), // p-2
+                          width: double.infinity, // w-full
+                          decoration: BoxDecoration(
+                            color: Colors.grey[400], // bg-gray-400
+                            borderRadius:
+                            BorderRadius.circular(16.0), // rounded-2xl
+                          ),
+                          child: Stack(
+                            children: [
+                              Container(
+                                height: 4.0, // h-1
+                                decoration: BoxDecoration(
+                                  color: Colors.purple[600], // bg-purple-600
+                                  borderRadius:
+                                  BorderRadius.circular(16.0), // rounded-2xl
+                                ),
+                                width: MediaQuery.of(context).size.width *
+                                    8/14, // width: 40%
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          '10/14 taken',
+                          style: TextStyle(
+                            color: Colors.grey[400], // text-gray-400
+                            fontSize: 20.0, // text-xl
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        // Text(
+                        //   'text',
+                        //   style: TextStyle(
+                        //     fontSize: 16.0,
+                        //     color: Colors.black,
+                        //   ),
+                        // ),
+                      ],
+                    ),
+                  ),
+
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.8), // bg-white/80
+                      borderRadius: BorderRadius.circular(24.0), // rounded-3xl
+                    ),
+                    margin: EdgeInsets.symmetric(vertical: 16.0),
+                    // my-4
+                    padding: EdgeInsets.all(24.0),
+                    // p-6
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'In 12 hours, 25 minutes',
+                          style: TextStyle(
+                            color: Colors.grey[400], // text-gray-400
+                            fontSize: 20.0, // text-xl
+                          ),
+                        ),
+                        SizedBox(height: 8.0), // spacing between elements
+                        Text(
+                          'Semaglutide',
+                          style: TextStyle(
+                            fontSize: 32.0, // text-4xl
+                            color: Colors.black,
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          '3mg, 1 tablet',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                        SizedBox(height: 16.0),
+                        Container(
+                          padding: EdgeInsets.all(8.0), // p-2
+                          width: double.infinity, // w-full
+                          decoration: BoxDecoration(
+                            color: Colors.grey[400], // bg-gray-400
+                            borderRadius:
+                            BorderRadius.circular(16.0), // rounded-2xl
+                          ),
+                          child: Stack(
+                            children: [
+                              Container(
+                                height: 4.0, // h-1
+                                decoration: BoxDecoration(
+                                  color: Colors.purple[600], // bg-purple-600
+                                  borderRadius:
+                                  BorderRadius.circular(16.0), // rounded-2xl
+                                ),
+                                width: MediaQuery.of(context).size.width *
+                                    8/11, // width: 40%
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          '9/10 taken',
+                          style: TextStyle(
+                            color: Colors.grey[400], // text-gray-400
+                            fontSize: 20.0, // text-xl
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        // Text(
+                        //   'text',
+                        //   style: TextStyle(
+                        //     fontSize: 16.0,
+                        //     color: Colors.black,
+                        //   ),
+                        // ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.8), // bg-white/80
+                      borderRadius: BorderRadius.circular(24.0), // rounded-3xl
+                    ),
+                    margin: EdgeInsets.symmetric(vertical: 16.0),
+                    // my-4
+                    padding: EdgeInsets.all(24.0),
+                    // p-6
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'In 12 hours, 25 minutes',
+                          style: TextStyle(
+                            color: Colors.grey[400], // text-gray-400
+                            fontSize: 20.0, // text-xl
+                          ),
+                        ),
+                        SizedBox(height: 8.0), // spacing between elements
+                        Text(
+                          'Losartan',
+                          style: TextStyle(
+                            fontSize: 32.0, // text-4xl
+                            color: Colors.black,
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          '50mg, 3 tablets',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                        SizedBox(height: 16.0),
+                        Container(
+                          padding: EdgeInsets.all(8.0), // p-2
+                          width: double.infinity, // w-full
+                          decoration: BoxDecoration(
+                            color: Colors.grey[400], // bg-gray-400
+                            borderRadius:
+                            BorderRadius.circular(16.0), // rounded-2xl
+                          ),
+                          child: Stack(
+                            children: [
+                              Container(
+                                height: 4.0, // h-1
+                                decoration: BoxDecoration(
+                                  color: Colors.purple[600], // bg-purple-600
+                                  borderRadius:
+                                  BorderRadius.circular(16.0), // rounded-2xl
+                                ),
+                                width: MediaQuery.of(context).size.width *
+                                    15/24, // width: 40%
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          '15/24 taken',
+                          style: TextStyle(
+                            color: Colors.grey[400], // text-gray-400
+                            fontSize: 20.0, // text-xl
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        // Text(
+                        //   'text',
+                        //   style: TextStyle(
+                        //     fontSize: 16.0,
+                        //     color: Colors.black,
+                        //   ),
+                        // ),
+                      ],
+                    ),
+                  ),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
