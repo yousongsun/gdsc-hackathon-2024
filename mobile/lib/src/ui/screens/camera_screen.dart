@@ -69,7 +69,7 @@ class _CameraScreenState extends State<CameraScreen> {
                 GestureDetector(
                   onTap: () {
                     // Handle your navigation logic here
-                    Navigator.pushNamed(context, '/');
+                    Navigator.pushNamed(context, '/home');
                   },
                   child: Image.asset(
                     'assets/images/icon.jpg',
@@ -103,7 +103,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       padding: const EdgeInsets.only(bottom: 20), // Add padding from the bottom if needed
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/');
+                          Navigator.pushNamed(context, '/prescriptions');
                         },
                         child: Text('Capture'), // Example button
                       ),
@@ -129,7 +129,7 @@ class _CameraScreenState extends State<CameraScreen> {
         ],
         onTap: (int index) {
           if (index == 0) {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/home');
           } else if (index == 1) {
             Navigator.pushNamed(context, '/calendar');
           } else if (index == 2) {

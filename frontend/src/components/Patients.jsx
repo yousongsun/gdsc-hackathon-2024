@@ -4,6 +4,7 @@ import Patient from "./Patient";
 
 const mockPatients = [
   {
+    _id: "1",
     lastSeen: "14/7/2024",
     name: "Jane Black",
     address: "Auckland",
@@ -12,6 +13,7 @@ const mockPatients = [
     birthDate: "14/2/2000",
   },
   {
+    _id: "2",
     lastSeen: "14/7/2024",
     name: "Jane Black",
     address: "Auckland",
@@ -20,6 +22,7 @@ const mockPatients = [
     birthDate: "14/2/2000",
   },
   {
+    _id: "3",
     lastSeen: "14/7/2024",
     name: "Jane Black",
     address: "Auckland",
@@ -28,6 +31,7 @@ const mockPatients = [
     birthDate: "14/2/2000",
   },
   {
+    _id: "4",
     lastSeen: "14/7/2024",
     name: "Jane Black",
     address: "Auckland",

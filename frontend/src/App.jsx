@@ -10,6 +10,8 @@ import Profile from "./components/Profile";
 import Prescription from "./components/Prescription";
 import Login from "./components/Login";
 import Patients from "./components/Patients.jsx";
+import PatientDetail from "./components/PatientDetail.jsx";
+
 const App = () => {
   const [sidebarVisible, setsidebarVisible] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -64,6 +66,7 @@ const App = () => {
             <Route path="/prescriptions" element={<AllPrescriptions />} />
 
             <Route path="/patients" element={<Patients />} />
+            <Route path="/patients/details" element={<PatientDetail />} />
 
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/add-prescription" element={<AddPrescription />} />
