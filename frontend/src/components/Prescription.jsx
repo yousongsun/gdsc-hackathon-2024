@@ -8,7 +8,7 @@ import medImage from "../assets/metformin.jpg"; // Adjust the path as needed
 const Prescription = () => {
   const { name } = useParams();
   const [dosesTaken, setDosesTaken] = useState(22);
-  const [dosesTotal, setDosesTotal] = useState(55);
+  const [dosesTotal, setDosesTotal] = useState(32);
   const [prescription, setPrescription] = useState({
     prescriptionName: "Prescription 1",
     medicationName: "Metformin",
